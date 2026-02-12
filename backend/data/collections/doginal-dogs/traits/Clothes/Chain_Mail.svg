@@ -1,11 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <path d="M140,400 Q256,380 372,400 L372,512 L140,512 Z" fill="#4b5563" />
-  <circle cx="170" cy="430" r="8" fill="none" stroke="#9ca3af" stroke-width="1"/>
-  <circle cx="195" cy="430" r="8" fill="none" stroke="#9ca3af" stroke-width="1"/>
-  <circle cx="220" cy="430" r="8" fill="none" stroke="#9ca3af" stroke-width="1"/>
-  <circle cx="245" cy="430" r="8" fill="none" stroke="#9ca3af" stroke-width="1"/>
-  <circle cx="270" cy="430" r="8" fill="none" stroke="#9ca3af" stroke-width="1"/>
-  <circle cx="295" cy="430" r="8" fill="none" stroke="#9ca3af" stroke-width="1"/>
-  <circle cx="320" cy="430" r="8" fill="none" stroke="#9ca3af" stroke-width="1"/>
-  <circle cx="345" cy="430" r="8" fill="none" stroke="#9ca3af" stroke-width="1"/>
+  <path d="M140,419 Q256,410 372,419 L385,512 L127,512 Z" fill="#1e293b" />
+<pattern id="chain" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="3" fill="none" stroke="#64748b" stroke-width="1"/></pattern>
+<rect x="140" y="420" width="232" height="92" fill="url(#chain)"/>
 </svg>

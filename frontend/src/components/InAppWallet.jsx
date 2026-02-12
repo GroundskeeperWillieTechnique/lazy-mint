@@ -29,10 +29,17 @@ const InAppWallet = ({ onConnect, onDisconnect, isOpen, onClose }) => {
   }, []);
 
   const fetchBalance = async (addr) => {
+    if (!addr) return;
     setLoading(true);
-    const bal = await DogeWallet.getBalance(addr);
-    setBalance(bal);
-    setLoading(false);
+    try {
+      const bal = await DogeWallet.getBalance(addr);
+      setBalance(Number(bal) || 0);
+    } catch (err) {
+      console.error("Balance fetch failed", err);
+      setBalance(0);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleCreate = () => {

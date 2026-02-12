@@ -126,9 +126,18 @@ const Marketplace = () => {
           />
         </div>
 
-        <button className="flex items-center gap-2 px-6 py-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 font-bold text-sm transition-all text-gray-400 hover:text-white">
-          <Filter size={18} /> Filters
-        </button>
+        <div className="flex items-center gap-2">
+          <button 
+            onClick={fetchCollections}
+            disabled={loading}
+            className="flex items-center gap-2 px-6 py-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 font-bold text-sm transition-all text-gray-400 hover:text-white disabled:opacity-50"
+          >
+            <RefreshCw size={18} className={loading ? "animate-spin" : ""} /> Refresh
+          </button>
+          <button className="flex items-center gap-2 px-6 py-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 font-bold text-sm transition-all text-gray-400 hover:text-white">
+            <Filter size={18} /> Filters
+          </button>
+        </div>
       </div>
 
       {/* Trending Collections */}
