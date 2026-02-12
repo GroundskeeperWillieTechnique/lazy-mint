@@ -1,0 +1,10 @@
+{
+  "name": "Smile",
+  "category": "Mouth",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Smile.svg",
+  "attributes": {
+    "variant": "smile"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Chain Mail",
+  "category": "Clothes",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Chain_Mail.svg",
+  "attributes": {
+    "variant": "chain-mail"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Silver Chain",
+  "category": "Accessory",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Silver_Chain.svg",
+  "attributes": {
+    "variant": "silver-chain"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Cyber Visor",
+  "category": "Eyes",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Cyber_Visor.svg",
+  "attributes": {
+    "variant": "cyber-visor"
+  }
+}

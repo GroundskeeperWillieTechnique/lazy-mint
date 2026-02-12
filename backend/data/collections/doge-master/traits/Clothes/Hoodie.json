@@ -1,0 +1,10 @@
+{
+  "name": "Hoodie",
+  "category": "Clothes",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Hoodie.svg",
+  "attributes": {
+    "variant": "hoodie"
+  }
+}

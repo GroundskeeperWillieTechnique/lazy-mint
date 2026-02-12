@@ -1,0 +1,10 @@
+{
+  "name": "Void Black",
+  "category": "Background",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Void_Black.svg",
+  "attributes": {
+    "variant": "void-black"
+  }
+}

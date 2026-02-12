@@ -1,0 +1,24 @@
+{
+  "id": "doge-master",
+  "name": "Doge Master Collection",
+  "symbol": "MASTER",
+  "description": "The definitive Doginals collection, combining all high-quality traits into one master set.",
+  "totalSupply": 10000,
+  "mintPrice": 100,
+  "traitCount": 53,
+  "categories": [
+    "Background",
+    "Fur",
+    "Eyes",
+    "Mouth",
+    "Hat",
+    "Clothes",
+    "Accessory"
+  ],
+  "rarityTiers": [
+    "Legendary",
+    "Rare",
+    "Uncommon",
+    "Common"
+  ]
+}

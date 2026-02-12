@@ -1,0 +1,10 @@
+{
+  "name": "Tuxedo",
+  "category": "Clothes",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Tuxedo.svg",
+  "attributes": {
+    "variant": "tuxedo"
+  }
+}

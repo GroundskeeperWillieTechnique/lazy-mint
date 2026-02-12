@@ -1,0 +1,10 @@
+{
+  "name": "Cap",
+  "category": "Hat",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Cap.svg",
+  "attributes": {
+    "variant": "cap"
+  }
+}
