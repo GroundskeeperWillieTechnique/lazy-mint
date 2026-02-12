@@ -34,14 +34,31 @@ const Marketplace = () => {
     c.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Generate sample items from collection traits
+  // Sample traits for preview
+  const sampleTraits = {
+    Background: ['Arctic', 'Crimson', 'Gold_Rush', 'Midnight_Blue', 'Neon_Purple'],
+    Fur: ['Black', 'White', 'Golden', 'Tan', 'Cream'],
+    Clothes: ['Hoodie', 'Tuxedo', 'Armor', 'Space_Suit', 'Hawaiian'],
+    Eyes: ['Normal', 'Sunglasses', 'Laser', 'Heart_Eyes', 'Cyber_Visor'],
+    Mouth: ['Smile', 'Grin', 'Cigar', 'Bone', 'Pizza'],
+    Hat: ['Crown', 'Beanie', 'Top_Hat', 'Cap', 'Halo'],
+    Accessory: ['Gold_Chain', 'Bandana', 'Space_Suit', 'None', 'Scarf']
+  };
+
   const generateItems = (col) => {
-    const cats = col.categories || [];
     return Array.from({ length: 8 }).map((_, i) => ({
       id: `${col.id}-${i}`,
       name: `${col.name} #${i + 1000}`,
       price: Math.floor(Math.random() * 500) + 50,
-      trait: cats[i % cats.length] || 'Unknown',
+      traits: {
+        Background: sampleTraits.Background[i % sampleTraits.Background.length],
+        Fur: sampleTraits.Fur[i % sampleTraits.Fur.length],
+        Clothes: sampleTraits.Clothes[i % sampleTraits.Clothes.length],
+        Eyes: sampleTraits.Eyes[i % sampleTraits.Eyes.length],
+        Mouth: sampleTraits.Mouth[i % sampleTraits.Mouth.length],
+        Hat: sampleTraits.Hat[i % sampleTraits.Hat.length],
+        Accessory: sampleTraits.Accessory[i % sampleTraits.Accessory.length],
+      }
     }));
   };
 
@@ -84,8 +101,30 @@ const Marketplace = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {items.map(item => (
             <div key={item.id} className="bg-[#111] border border-white/5 rounded-2xl p-3 hover:border-doge/30 transition-all group relative">
-               <div className="aspect-square bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl mb-3 overflow-hidden flex items-center justify-center">
-                 <span className="text-5xl font-black text-white/10 group-hover:text-doge/30 transition-colors">{selectedCollection.symbol || 'Ð'}</span>
+               <div className="aspect-square bg-[#151b28] rounded-xl mb-3 overflow-hidden relative">
+                 {/* Dynamic Layered NFT Rendering */}
+                 {selectedCollection.id === 'doge-master' ? (
+                   <>
+                     {/* Background */}
+                     <img src={`${ASSET_BASE}/assets/collections/${selectedCollection.id}/traits/Background/${item.traits.Background?.replace(/ /g, '_')}.svg`} className="absolute inset-0 w-full h-full object-cover" />
+                     {/* Fur (Body + Head) */}
+                     <img src={`${ASSET_BASE}/assets/collections/${selectedCollection.id}/traits/Fur/${item.traits.Fur?.replace(/ /g, '_')}.svg`} className="absolute inset-0 w-full h-full object-cover z-10" />
+                     {/* Clothes */}
+                     <img src={`${ASSET_BASE}/assets/collections/${selectedCollection.id}/traits/Clothes/${item.traits.Clothes?.replace(/ /g, '_')}.svg`} className="absolute inset-0 w-full h-full object-cover z-20" />
+                     {/* Eyes */}
+                     <img src={`${ASSET_BASE}/assets/collections/${selectedCollection.id}/traits/Eyes/${item.traits.Eyes?.replace(/ /g, '_')}.svg`} className="absolute inset-0 w-full h-full object-cover z-30" />
+                     {/* Mouth */}
+                     <img src={`${ASSET_BASE}/assets/collections/${selectedCollection.id}/traits/Mouth/${item.traits.Mouth?.replace(/ /g, '_')}.svg`} className="absolute inset-0 w-full h-full object-cover z-30" />
+                     {/* Hat */}
+                     <img src={`${ASSET_BASE}/assets/collections/${selectedCollection.id}/traits/Hat/${item.traits.Hat?.replace(/ /g, '_')}.svg`} className="absolute inset-0 w-full h-full object-cover z-40" />
+                     {/* Accessory */}
+                     <img src={`${ASSET_BASE}/assets/collections/${selectedCollection.id}/traits/Accessory/${item.traits.Accessory?.replace(/ /g, '_')}.svg`} className="absolute inset-0 w-full h-full object-cover z-50" />
+                   </>
+                 ) : (
+                   <div className="w-full h-full flex items-center justify-center">
+                     <span className="text-5xl font-black text-white/10 group-hover:text-doge/30 transition-colors">{selectedCollection.symbol || 'Ð'}</span>
+                   </div>
+                 )}
                </div>
                <div className="flex justify-between items-end">
                  <div>

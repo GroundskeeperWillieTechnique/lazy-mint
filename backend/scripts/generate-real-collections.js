@@ -38,12 +38,13 @@ const dogeBodies = {
   'Cream': { main: '#fffbeb', dark: '#fef3c7', light: '#ffffff', snout: '#fff7ed' },
 };
 
+
 function makeDogeBody(c) {
   return [
-    // Neck/Body Shadow
-    pathEl('M140,400 Q256,385 372,400 L390,512 L122,512 Z', c.dark, 'opacity="0.3"'),
-    // Main Body
-    pathEl('M140.5,419.5 L372.5,419.5 Q380,450 380,512 L132,512 Q132,450 140.5,419.5 Z', c.main),
+    // Neck/Body Shadow (Extended up behind head)
+    pathEl('M140,320 Q256,320 372,320 L390,512 L122,512 Z', c.dark, 'opacity="0.3"'),
+    // Main Body (Raised to 330 to overlap behind chin at 340)
+    pathEl('M150,330 Q256,330 362,330 L380,512 L132,512 Z', c.main),
     // Ears
     pathEl('M170,195 L145,130 Q170,110 205,150 Z', c.main), // Left Ear
     pathEl('M170,195 L155,150 Q175,135 185,175 Z', c.dark, 'opacity="0.4"'), // Left Ear Inner
@@ -64,16 +65,16 @@ function makeDogeBody(c) {
 // ── Eyes SVGs (More expressive/layered) ──
 const eyeSvgs = {
   'Normal': [
-    pathEl('M220,215 Q235,210 242,225 Q235,240 220,235 Q205,230 220,215 Z', '#ffffff'), // Left
-    pathEl('M292,215 Q307,210 314,225 Q307,240 292,235 Q277,230 292,215 Z', '#ffffff'), // Right
-    pathEl('M228,222 Q234,220 236,226 Q234,232 228,230 Q222,228 228,222 Z', '#0f172a'), // Pupil L
-    pathEl('M298,222 Q304,220 306,226 Q304,232 298,230 Q292,228 298,222 Z', '#0f172a'), // Pupil R
+    pathEl('M220,215 Q235,210 242,225 Q235,240 220,235 Q205,230 220,215 Z', '#ffffff'), 
+    pathEl('M292,215 Q307,210 314,225 Q307,240 292,235 Q277,230 292,215 Z', '#ffffff'), 
+    pathEl('M228,222 Q234,220 236,226 Q234,232 228,230 Q222,228 228,222 Z', '#000000'), 
+    pathEl('M298,222 Q304,220 306,226 Q304,232 298,230 Q292,228 298,222 Z', '#000000'), 
   ].join('\n'),
   'Sunglasses': [
-    pathEl('M195,210 L317,210 L317,245 Q256,255 195,245 Z', '#0f172a'), // Frame
-    pathEl('M205,215 L250,215 L250,240 Q227,245 205,240 Z', '#334155'), // Lens L
-    pathEl('M262,215 L307,215 L307,240 Q285,245 262,240 Z', '#334155'), // Lens R
-    pathEl('M205,215 L230,220', '#ffffff', 'opacity="0.1" stroke-width="2" stroke="#fff"'), // Reflection
+    pathEl('M195,210 L317,210 L317,245 Q256,255 195,245 Z', '#0f172a'), 
+    pathEl('M205,215 L250,215 L250,240 Q227,245 205,240 Z', '#334155'), 
+    pathEl('M262,215 L307,215 L307,240 Q285,245 262,240 Z', '#334155'), 
+    pathEl('M205,215 L230,220', '#ffffff', 'opacity="0.1" stroke-width="2" stroke="#fff"'),
   ].join('\n'),
   'Laser': [
     grad('l_red', [{offset:'0%', color:'#ef4444'}, {offset:'100%', color:'#ff000000'}], 'radial', {cx:'230', cy:'225', r:'30'}),
@@ -88,7 +89,10 @@ const eyeSvgs = {
     pathEl('M280,230 C260,210 290,205 295,220 C300,205 330,210 310,230 L295,245 Z', '#f43f5e'),
   ].join('\n'),
   'Sleepy': [
+    // Added eyelids for visibility
+    pathEl('M210,225 Q230,235 250,225 Z', '#cbd5e1'),
     pathEl('M210,225 Q230,235 250,225', 'none', 'stroke="#475569" stroke-width="4" stroke-linecap="round" fill="none"'),
+    pathEl('M280,225 Q300,235 320,225 Z', '#cbd5e1'),
     pathEl('M280,225 Q300,235 320,225', 'none', 'stroke="#475569" stroke-width="4" stroke-linecap="round" fill="none"'),
   ].join('\n'),
   'Dollar Signs': [
@@ -105,8 +109,8 @@ const eyeSvgs = {
     pathEl('M292,215 Q307,210 314,225 Q307,240 292,235 Q277,230 292,215 Z', '#fee2e2'),
     pathEl('M215,220 L225,223', 'none', 'stroke="#ef4444" stroke-width="0.5"'),
     pathEl('M300,220 L290,223', 'none', 'stroke="#ef4444" stroke-width="0.5"'),
-    pathEl('M230,222 Q234,220 236,226 Q234,232 230,230 Z', '#0f172a'),
-    pathEl('M300,222 Q306,220 308,226 Q306,232 300,230 Z', '#0f172a'),
+    pathEl('M230,222 Q234,220 236,226 Q234,232 230,230 Z', '#000000'),
+    pathEl('M300,222 Q306,220 308,226 Q306,232 300,230 Z', '#000000'),
   ].join('\n'),
 };
 
@@ -125,8 +129,8 @@ const mouthSvgs = {
   ].join('\n'),
   'Cigar': [
     pathEl('M265,308 L310,302', 'none', 'stroke="#713f12" stroke-width="8" stroke-linecap="round"'),
-    pathEl('M310,302 L315,301', 'none', 'stroke="#ef4444" stroke-width="6" stroke-linecap="round"'), // Tip
-    pathEl('M315,301 Q325,285 320,270', 'none', 'stroke="#ffffff" stroke-width="2" stroke-dasharray="2,2" opacity="0.3" fill="none"'), // Smoke
+    pathEl('M310,302 L315,301', 'none', 'stroke="#ef4444" stroke-width="6" stroke-linecap="round"'), 
+    pathEl('M315,301 Q325,285 320,270', 'none', 'stroke="#ffffff" stroke-width="2" stroke-dasharray="2,2" opacity="0.3" fill="none"'), 
   ].join('\n'),
   'Bone': [
     pathEl('M235,305 L277,305', '#f1f5f9', 'stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"'),
@@ -142,78 +146,84 @@ const mouthSvgs = {
   ].join('\n'),
 };
 
-// ── Hat SVGs (Layered/Gradients) ──
+// ── Hat SVGs (WIDENED & RAISED) ──
 const hatSvgs = {
   'None': '',
   'Crown': [
     grad('gold', [{offset:'0%', color:'#fcd34d'}, {offset:'100%', color:'#fbbf24'}]),
-    pathEl('M185,150 L205,100 L230,140 L256,90 L282,140 L307,100 L327,150 L185,150 Z', 'url(#gold)', 'stroke="#d97706" stroke-width="2"'),
-    pathEl('M185,150 L327,150 L327,165 L185,165 Z', '#f59e0b', 'stroke="#d97706" stroke-width="2"'),
-    `<circle cx="256" cy="115" r="5" fill="#ef4444"/>`, // Gem
+    // Raised Base to ~130 (was 150)
+    pathEl('M136,130 L165,60 L200,120 L256,40 L312,120 L347,60 L376,130 L136,130 Z', 'url(#gold)', 'stroke="#d97706" stroke-width="2"'),
+    pathEl('M136,130 L376,130 L376,150 L136,150 Z', '#f59e0b', 'stroke="#d97706" stroke-width="2"'),
+    `<circle cx="256" cy="95" r="8" fill="#ef4444"/>`, 
   ].join('\n'),
   'Beanie': [
-    pathEl('M185,170 Q256,120 327,170 L327,185 Q256,175 185,185 Z', '#dc2626'),
-    pathEl('M240,125 Q256,110 272,125 Q256,140 240,125 Z', '#ffffff'), // Pom pom
+    // Raised Base to ~150 (was 170)
+    pathEl('M135,150 Q256,70 377,150 L377,175 Q256,165 135,175 Z', '#dc2626'),
+    pathEl('M230,75 Q256,50 282,75 Q256,100 230,75 Z', '#ffffff'), 
   ].join('\n'),
   'Top Hat': [
-    pathEl('M210,100 L302,100 L302,175 L210,175 Z', '#0f172a'),
-    pathEl('M185,175 L327,175 L327,185 L185,185 Z', '#0f172a'),
-    pathEl('M210,155 L302,155 L302,162 L210,162 Z', '#dc2626'), // Band
+    // Raised Base to ~155 (was 175)
+    pathEl('M170,70 L342,70 L342,155 L170,155 Z', '#0f172a'),
+    pathEl('M135,155 L377,155 L377,170 L135,170 Z', '#0f172a'),
+    pathEl('M170,135 L342,135 L342,150 L170,150 Z', '#dc2626'), 
   ].join('\n'),
   'Cap': [
-    pathEl('M195,170 Q256,115 317,170', '#2563eb'),
-    pathEl('M310,170 L360,185 Q310,195 310,170 Z', '#1d4ed8'), // Bill
-    pathEl('M195,170 Q256,180 317,170 L317,180 Q256,190 195,180 Z', '#2563eb'),
+    // Raised Base to ~150 (was 170)
+    pathEl('M155,150 Q256,85 357,150', '#2563eb'),
+    pathEl('M340,150 L400,175 Q340,185 340,150 Z', '#1d4ed8'), 
+    pathEl('M155,150 Q256,160 357,150 L357,160 Q256,170 155,160 Z', '#2563eb'),
   ].join('\n'),
   'Cowboy': [
-    pathEl('M170,175 Q256,155 342,175 L342,185 Q256,165 170,185 Z', '#713f12'), // Brim
-    pathEl('M215,125 Q256,115 297,125 L297,175 L215,175 Z', '#713f12'), // Crown
-    pathEl('M215,155 L297,155 L297,162 L215,162 Z', '#a16207'), // Band
+    // Raised Base to ~155 (was 175)
+    pathEl('M120,155 Q256,125 392,155 L392,170 Q256,140 120,170 Z', '#713f12'), 
+    pathEl('M175,95 Q256,85 337,95 L337,155 L175,155 Z', '#713f12'), 
+    pathEl('M175,135 L337,135 L337,145 L175,145 Z', '#a16207'), 
   ].join('\n'),
   'Pirate': [
-    pathEl('M185,175 Q256,100 327,175 Z', '#0f172a'),
-    `<text x="256" y="155" fill="white" font-size="24" text-anchor="middle">☠</text>`,
+    // Raised Base to ~155 (was 175)
+    pathEl('M135,155 Q256,60 377,155 Z', '#0f172a'),
+    `<text x="256" y="140" fill="white" font-size="32" text-anchor="middle">☠</text>`,
   ].join('\n'),
   'Halo': [
-    grad('halo_g', [{offset:'0%', color:'#fbbf24'}, {offset:'100%', color:'#fbbf2400'}], 'radial', {cx:'256', cy:'110', r:'50'}),
-    `<ellipse cx="256" cy="110" rx="60" ry="15" fill="none" stroke="url(#halo_g)" stroke-width="4"/>`,
+    grad('halo_g', [{offset:'0%', color:'#fbbf24'}, {offset:'100%', color:'#fbbf2400'}], 'radial', {cx:'256', cy:'90', r:'70'}),
+    `<ellipse cx="256" cy="90" rx="90" ry="20" fill="none" stroke="url(#halo_g)" stroke-width="4"/>`,
   ].join('\n'),
 };
 
-// ── Clothes SVGs ──
+// ── Clothes SVGs (RAISED to Y=340 to meet chin) ──
 const clothesSvgs = {
   'None': '',
   'Hoodie': [
-    pathEl('M140,419 Q256,400 372,419 L385,512 L127,512 Z', '#334155'),
-    pathEl('M215,410 Q256,395 297,410 L285,450 Q256,440 227,450 Z', '#1e293b'), // Hood opening
+    pathEl('M140,340 Q256,330 372,340 L385,512 L127,512 Z', '#334155'),
+    pathEl('M215,335 Q256,325 297,335 L285,380 Q256,370 227,380 Z', '#1e293b'), // Hood opening
   ].join('\n'),
   'Tuxedo': [
-    pathEl('M140,419 Q256,410 372,419 L385,512 L127,512 Z', '#0f172a'),
-    pathEl('M256,419 L210,512 Z', '#ffffff'), // Shirt L
-    pathEl('M256,419 L302,512 Z', '#ffffff'), // Shirt R
-    pathEl('M245,430 L256,420 L267,430 L256,440 Z', '#0f172a'), // Bow tie
+    pathEl('M140,340 Q256,330 372,340 L385,512 L127,512 Z', '#0f172a'),
+    pathEl('M256,340 L210,512 Z', '#ffffff'), // Shirt L
+    pathEl('M256,340 L302,512 Z', '#ffffff'), // Shirt R
+    pathEl('M245,350 L256,340 L267,350 L256,360 Z', '#0f172a'), // Bow tie
   ].join('\n'),
   'Hawaiian': [
-    pathEl('M140,419 Q256,410 372,419 L385,512 L127,512 Z', '#0891b2'),
-    `<circle cx="200" cy="450" r="10" fill="#fbbf24" opacity="0.4"/>`,
-    `<circle cx="300" cy="480" r="15" fill="#f472b6" opacity="0.4"/>`,
-    `<circle cx="170" cy="490" r="8" fill="#ffffff" opacity="0.4"/>`,
+    pathEl('M140,340 Q256,330 372,340 L385,512 L127,512 Z', '#0891b2'),
+    `<circle cx="200" cy="380" r="10" fill="#fbbf24" opacity="0.4"/>`,
+    `<circle cx="300" cy="410" r="15" fill="#f472b6" opacity="0.4"/>`,
+    `<circle cx="170" cy="420" r="8" fill="#ffffff" opacity="0.4"/>`,
   ].join('\n'),
   'Armor': [
-    pathEl('M140,419 Q256,410 372,419 L385,512 L127,512 Z', '#475569'),
-    pathEl('M160,430 L352,430 L352,450 L160,450 Z', '#64748b'), // Plates
-    pathEl('M180,470 L332,470 L332,490 L180,490 Z', '#64748b'),
+    pathEl('M140,340 Q256,330 372,340 L385,512 L127,512 Z', '#475569'),
+    pathEl('M160,350 L352,350 L352,370 L160,370 Z', '#64748b'), // Plates
+    pathEl('M180,390 L332,390 L332,410 L180,410 Z', '#64748b'),
   ].join('\n'),
   'Chain Mail': [
-    pathEl('M140,419 Q256,410 372,419 L385,512 L127,512 Z', '#1e293b'),
+    pathEl('M140,340 Q256,330 372,340 L385,512 L127,512 Z', '#1e293b'),
     `<pattern id="chain" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="3" fill="none" stroke="#64748b" stroke-width="1"/></pattern>`,
-    `<rect x="140" y="420" width="232" height="92" fill="url(#chain)"/>`,
+    `<rect x="140" y="340" width="232" height="172" fill="url(#chain)"/>`,
   ].join('\n'),
   'Space Suit': [
-    pathEl('M140,419 Q256,410 372,419 L385,512 L127,512 Z', '#f1f5f9'),
-    pathEl('M230,430 L282,430 L282,460 L230,460 Z', '#0891b2'), // Control panel
-    `<circle cx="245" cy="445" r="3" fill="#ef4444"/>`,
-    `<circle cx="265" cy="445" r="3" fill="#22c55e"/>`,
+    pathEl('M140,340 Q256,330 372,340 L385,512 L127,512 Z', '#f1f5f9'),
+    pathEl('M230,360 L282,360 L282,390 L230,390 Z', '#0891b2'), // Control panel
+    `<circle cx="245" cy="375" r="3" fill="#ef4444"/>`,
+    `<circle cx="265" cy="375" r="3" fill="#22c55e"/>`,
   ].join('\n'),
 };
 
@@ -255,6 +265,19 @@ const collections = [
   {
     slug: 'doge-master', name: 'Doge Master Collection', symbol: 'MASTER', supply: 10000,
     description: 'The definitive Doginals collection, combining all high-quality traits into one master set.',
+    categories: {
+      Background: Object.keys(bgSvgs),
+      Fur: Object.keys(dogeBodies),
+      Eyes: Object.keys(eyeSvgs),
+      Mouth: Object.keys(mouthSvgs),
+      Hat: Object.keys(hatSvgs),
+      Clothes: Object.keys(clothesSvgs),
+      Accessory: Object.keys(neckSvgs),
+    }
+  },
+  {
+    slug: 'doge-nft', name: 'Doge NFT', symbol: 'DNFT', supply: 10000,
+    description: 'The ultimate 10,000 piece Doge collection. 100% quality, offline generation.',
     categories: {
       Background: Object.keys(bgSvgs),
       Fur: Object.keys(dogeBodies),
