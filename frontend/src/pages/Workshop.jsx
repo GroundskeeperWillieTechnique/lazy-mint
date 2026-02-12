@@ -72,7 +72,7 @@ const Workshop = ({ isConnected, userId, credits, setCredits, mintTransaction, u
                   // If we have metadata, use it, otherwise construct default path
                   const meta = col.traitMetadata?.[cat]?.[tName];
                   if (meta && meta.imagePath) {
-                      images[cat][tName] = meta.imagePath;
+                      images[cat][tName] = `${ASSET_BASE}/assets/collections/${targetId}/${meta.imagePath}`;
                   } else {
                       // Fallback construction
                       const safeName = tName.replace(/\s+/g, '_');
