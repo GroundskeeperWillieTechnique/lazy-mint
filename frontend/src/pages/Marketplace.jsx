@@ -36,6 +36,7 @@ const Marketplace = () => {
 
   // Sample traits for preview
   const sampleTraits = {
+    // Verified names from generate-real-collections.js
     Background: ['Arctic', 'Crimson', 'Gold_Rush', 'Midnight_Blue', 'Neon_Purple'],
     Fur: ['Black', 'White', 'Golden', 'Tan', 'Cream'],
     Clothes: ['Hoodie', 'Tuxedo', 'Armor', 'Space_Suit', 'Hawaiian'],
@@ -48,16 +49,16 @@ const Marketplace = () => {
   const generateItems = (col) => {
     return Array.from({ length: 8 }).map((_, i) => ({
       id: `${col.id}-${i}`,
-      name: `${col.name} #${i + 1000}`,
+      name: `${col.name} #${Math.floor(Math.random() * 9000) + 1000}`,
       price: Math.floor(Math.random() * 500) + 50,
       traits: {
-        Background: sampleTraits.Background[i % sampleTraits.Background.length],
-        Fur: sampleTraits.Fur[i % sampleTraits.Fur.length],
-        Clothes: sampleTraits.Clothes[i % sampleTraits.Clothes.length],
-        Eyes: sampleTraits.Eyes[i % sampleTraits.Eyes.length],
-        Mouth: sampleTraits.Mouth[i % sampleTraits.Mouth.length],
-        Hat: sampleTraits.Hat[i % sampleTraits.Hat.length],
-        Accessory: sampleTraits.Accessory[i % sampleTraits.Accessory.length],
+        Background: sampleTraits.Background[Math.floor(Math.random() * sampleTraits.Background.length)],
+        Fur: sampleTraits.Fur[Math.floor(Math.random() * sampleTraits.Fur.length)],
+        Clothes: sampleTraits.Clothes[Math.floor(Math.random() * sampleTraits.Clothes.length)],
+        Eyes: sampleTraits.Eyes[Math.floor(Math.random() * sampleTraits.Eyes.length)],
+        Mouth: sampleTraits.Mouth[Math.floor(Math.random() * sampleTraits.Mouth.length)],
+        Hat: sampleTraits.Hat[Math.floor(Math.random() * sampleTraits.Hat.length)],
+        Accessory: sampleTraits.Accessory[Math.floor(Math.random() * sampleTraits.Accessory.length)],
       }
     }));
   };
@@ -87,7 +88,6 @@ const Marketplace = () => {
            </div>
            <div>
              <h2 className="text-4xl font-black tracking-tighter">{selectedCollection.name}</h2>
-             <p className="text-xs text-gray-500">ID: {selectedCollection.id}</p>
              <div className="flex gap-4 mt-2 text-sm text-gray-500 font-bold">
                <span>Supply: {(selectedCollection.totalSupply || selectedCollection.supply || 0).toLocaleString()}</span>
                <span>{(selectedCollection.categories || []).length} traits</span>
