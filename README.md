@@ -6,7 +6,6 @@ Generate, customize, and mint unique Doginals NFTs with real generative SVG art.
 
 ## Features
 
-- 🎨 **6 Real Collections** — 167 unique SVG traits across Doginal Dogs, Doge Punks, Doge Rocks, Ordinal Doges, Doge Pixels, and Shibe World
 - 🎲 **Rarity-Weighted Shuffling** — Legendary, Rare, Uncommon, and Common traits
 - 💰 **In-App Doge Wallet** — Create or import wallets, send DOGE, mint NFTs
 - 🛒 **Marketplace** — Browse and explore all collections
@@ -58,17 +57,6 @@ Visit http://localhost:4001
 See [DEPLOY.md](./DEPLOY.md) for complete deployment instructions.
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
-
-## Collections
-
-| Collection | Supply | Traits | Description |
-|------------|--------|--------|-------------|
-| **Doginal Dogs** | 10,000 | 53 | The iconic pixel-art dogs on Dogecoin |
-| **Doge Punks** | 10,000 | 28 | CryptoPunks-style NFTs on Dogecoin |
-| **Doge Rocks** | 100 | 13 | The rarest collection — only 100 exist |
-| **Ordinal Doges** | 2,100 | 23 | One for every 10,000 Bitcoin mined |
-| **Doge Pixels** | 7,777 | 22 | Pixel warriors ready for battle |
-| **Shibe World** | 3,333 | 28 | Shibes exploring fantastical worlds |
 
 ## License
 
