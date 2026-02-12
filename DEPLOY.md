@@ -10,7 +10,7 @@
 Your code is ready and committed locally. Now push it to GitHub:
 
 ```bash
-1. Go to your repo on GitHub: <https://github.com/GroundskeeperWillieTechnique/lazy-mint>
+1. Go to your repo on GitHub: [<https://github.com/GroundskeeperWillieTechnique/lazy-mint>](https://github.com/GroundskeeperWillieTechnique/lazy-mint)
 
 # Then run these commands:
 cd "/home/hdx/Pictures/Lazy Minter"
@@ -60,9 +60,12 @@ After deployment, update the env var with your actual Render URL:
 ## Verification
 
 Once deployed, test:
+
 - ✓ App loads at your Render URL
+
 - ✓ Marketplace shows 6 collections
 - ✓ Workshop loads real SVG trait images
+
 - ✓ Wallet creation works (with confirmation dialog)
 - ✓ Collection switching works
 
