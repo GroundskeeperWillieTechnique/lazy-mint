@@ -43,7 +43,7 @@ const Marketplace = () => {
     Eyes: ['Normal', 'Sunglasses', 'Laser', 'Heart_Eyes', 'Cyber_Visor'],
     Mouth: ['Smile', 'Grin', 'Cigar', 'Bone', 'Pizza'],
     Hat: ['Crown', 'Beanie', 'Top_Hat', 'Cap', 'Halo'],
-    Accessory: ['Gold_Chain', 'Bandana', 'Space_Suit', 'None', 'Scarf']
+    Accessory: ['Gold_Chain', 'Bandana', 'Bow_Tie', 'None', 'Scarf']
   };
 
   const generateItems = (col) => {
