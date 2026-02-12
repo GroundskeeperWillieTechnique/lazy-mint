@@ -149,27 +149,6 @@ function App() {
             <p className="text-sm text-gray-500 font-medium">{pageInfo.sub}</p>
           </div>
           <div className="flex items-center gap-4">
-            
-            {/* Wallet Integration */}
-            {isConnected && walletMode === 'lazy' && (
-              <button 
-                 onClick={() => setShowInAppWallet(true)}
-                 className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-all font-bold text-xs"
-              >
-                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                Doge Wallet
-              </button>
-            )}
-
-            {isConnected && (
-              <div className="flex items-center gap-4 bg-white/5 px-4 py-2 rounded-2xl border border-white/5">
-                <div className="flex flex-col">
-                  <span className="text-[10px] text-gray-500 font-black uppercase tracking-widest">Spins</span>
-                  <span className="text-sm font-bold text-doge">UNLIMITED</span>
-                </div>
-              </div>
-            )}
-            
             <button 
               onClick={() => isConnected ? disconnect() : setShowInAppWallet(true)}
               className={`flex items-center gap-2 px-6 py-2.5 rounded-2xl transition-all font-black text-sm tracking-wide ${

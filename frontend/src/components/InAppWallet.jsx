@@ -105,14 +105,14 @@ const InAppWallet = ({ onConnect, onDisconnect, isOpen, onClose }) => {
         {view === 'main' && (
           <div className="space-y-4">
             <button onClick={() => {
-              if (window.confirm('⚠️ This will generate a new Dogecoin wallet.\n\nIMPORTANT: Your private key will be stored in this browser. Back it up immediately after creation.\n\nProceed?')) {
+              if (window.confirm('⚠️ Generate new Dogecoin wallet?\n\nYour private key will be stored in this browser.\nBack it up immediately!\n\nContinue?')) {
                 handleCreate();
               }
-            }} className="w-full py-4 bg-doge text-black rounded-xl font-black flex items-center justify-center gap-2 hover:scale-105 transition-all">
-              <Sparkles size={18} /> CREATE NEW WALLET
+            }} className="w-full py-4 bg-doge text-black rounded-xl font-black flex items-center justify-center gap-2 hover:scale-105 transition-all text-sm">
+              <Sparkles size={18} /> CREATE WALLET
             </button>
-            <button onClick={() => setView('import')} className="w-full py-4 bg-white/5 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-white/10 transition-all">
-              <Download size={18} /> IMPORT PRIVATE KEY
+            <button onClick={() => setView('import')} className="w-full py-4 bg-white/5 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-white/10 transition-all text-sm">
+              <Download size={18} /> IMPORT KEY
             </button>
           </div>
         )}
