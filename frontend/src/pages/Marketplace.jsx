@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Filter, TrendingUp, ChevronLeft, ShoppingCart, Loader } from 'lucide-react';
+import { Search, Filter, TrendingUp, ChevronLeft, ShoppingCart, Loader, RefreshCw } from 'lucide-react';
 import axios from 'axios';
 
 const API_BASE = import.meta.env.VITE_API_URL || '/api';
