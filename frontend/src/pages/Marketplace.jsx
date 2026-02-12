@@ -87,6 +87,7 @@ const Marketplace = () => {
            </div>
            <div>
              <h2 className="text-4xl font-black tracking-tighter">{selectedCollection.name}</h2>
+             <p className="text-xs text-gray-500">ID: {selectedCollection.id}</p>
              <div className="flex gap-4 mt-2 text-sm text-gray-500 font-bold">
                <span>Supply: {(selectedCollection.totalSupply || selectedCollection.supply || 0).toLocaleString()}</span>
                <span>{(selectedCollection.categories || []).length} traits</span>
