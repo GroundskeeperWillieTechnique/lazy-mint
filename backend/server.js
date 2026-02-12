@@ -15,15 +15,18 @@ const app = express();
 const COLLECTIONS_ROOT = path.join(__dirname, 'data/collections');
 
 // ─── Security ──────────────────────────────────────────────────
+app.set('trust proxy', 1); // Required for Render/Heroku (rate limiting)
+
 app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-      fontSrc: ["'self'", "https://fonts.gstatic.com"],
-      imgSrc: ["'self'", "data:", "https://cryptologos.cc", "https://api.dicebear.com"],
-      connectSrc: ["'self'", "http://localhost:4001"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https:", "http:"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https:", "http:"],
+      fontSrc: ["'self'", "https:", "data:"],
+      imgSrc: ["'self'", "data:", "https:", "http:"],
+      connectSrc: ["'self'", "https:", "http:"],
+      upgradeInsecureRequests: null, // Disable auto-upgrade to https (causes issues on some proxies)
     }
   },
   crossOriginResourcePolicy: { policy: "cross-origin" },
@@ -353,7 +356,10 @@ app.post('/api/mint-doge', mintLimiter, ensureUser, async (req, res) => {
 // ─── Serve Frontend Build in Production ────────────────────────
 const FRONTEND_BUILD = path.join(__dirname, '../frontend/dist');
 if (fs.existsSync(FRONTEND_BUILD)) {
+  console.log('[SERVER] Serving static files from:', FRONTEND_BUILD);
+  
   app.use(express.static(FRONTEND_BUILD));
+  
   // SPA fallback — all non-API routes serve index.html
   app.use((req, res, next) => {
     if (req.path.startsWith('/api') || req.path.startsWith('/assets')) return next();
@@ -363,8 +369,12 @@ if (fs.existsSync(FRONTEND_BUILD)) {
 
 // ─── Global error handler ──────────────────────────────────────
 app.use((err, req, res, next) => {
-  console.error('[ERROR]', err.message);
-  res.status(500).json({ error: 'Internal server error' });
+  console.error('[ERROR]', err.stack);
+  // Send error details to client for debugging (remove in final prod)
+  if (res.headersSent) {
+    return next(err);
+  }
+  res.status(500).json({ error: 'Internal server error', details: err.message });
 });
 
 // ─── 404 handler ───────────────────────────────────────────────
