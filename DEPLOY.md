@@ -86,16 +86,19 @@ Once deployed, test:
 ## Troubleshooting
 
 **Build fails?**
+
 - Check Render build logs
 
 - Ensure `package.json` exists in both `frontend/` and `backend/`
 
 **App won't load?**
+
 - Check `ALLOWED_ORIGINS` matches your deployed URL
 
 - Check Render logs for errors
 
 **Collections not loading?**
+
 - Ensure `backend/data/collections/` was committed to Git
 
 - Check browser console for API errors

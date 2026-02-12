@@ -68,4 +68,4 @@ PRs welcome! This is a community-driven project.
 
 ---
 
-**Built with ❤️ for the Dogecoin community**
+Built with ❤️ for the Dogecoin community
