@@ -1,0 +1,83 @@
+# Lazy Minter 🐕
+
+**The ultimate NFT launchpad for Dogecoin.**
+
+Generate, customize, and mint unique Doginals NFTs with real generative SVG art.
+
+## Features
+
+- 🎨 **6 Real Collections** — 167 unique SVG traits across Doginal Dogs, Doge Punks, Doge Rocks, Ordinal Doges, Doge Pixels, and Shibe World
+- 🎲 **Rarity-Weighted Shuffling** — Legendary, Rare, Uncommon, and Common traits
+- 💰 **In-App Doge Wallet** — Create or import wallets, send DOGE, mint NFTs
+- 🛒 **Marketplace** — Browse and explore all collections
+- 🖼️ **Gallery** — View your minted inscriptions
+- 📊 **Leaderboard** — Top collectors worldwide
+
+## Tech Stack
+
+- **Frontend**: React + Vite + TailwindCSS
+- **Backend**: Node.js + Express
+- **Blockchain**: Dogecoin (via SoChain API)
+- **Wallet**: BitcoinJS-lib with Dogecoin network params
+
+## Quick Start
+
+### Development
+
+```bash
+# Install dependencies
+cd backend && npm install
+cd ../frontend && npm install
+
+# Generate collections
+cd backend && node scripts/generate-real-collections.js
+
+# Start backend (port 4001)
+cd backend && npm start
+
+# Start frontend (port 4000)
+cd frontend && npm run dev
+```
+
+Visit http://localhost:4000
+
+### Production Build
+
+```bash
+# Build frontend
+cd frontend && npm run build
+
+# Start production server (serves frontend + API)
+cd backend && node server.js
+```
+
+Visit http://localhost:4001
+
+## Deploy to Render.com
+
+See [DEPLOY.md](./DEPLOY.md) for complete deployment instructions.
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
+## Collections
+
+| Collection | Supply | Traits | Description |
+|------------|--------|--------|-------------|
+| **Doginal Dogs** | 10,000 | 53 | The iconic pixel-art dogs on Dogecoin |
+| **Doge Punks** | 10,000 | 28 | CryptoPunks-style NFTs on Dogecoin |
+| **Doge Rocks** | 100 | 13 | The rarest collection — only 100 exist |
+| **Ordinal Doges** | 2,100 | 23 | One for every 10,000 Bitcoin mined |
+| **Doge Pixels** | 7,777 | 22 | Pixel warriors ready for battle |
+| **Shibe World** | 3,333 | 28 | Shibes exploring fantastical worlds |
+
+## License
+
+MIT
+
+## Contributing
+
+PRs welcome! This is a community-driven project.
+
+---
+
+**Built with ❤️ for the Dogecoin community**
