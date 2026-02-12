@@ -15,12 +15,16 @@ const Marketplace = () => {
     fetchCollections();
   }, []);
 
+  const [error, setError] = useState(null);
+
   const fetchCollections = async () => {
     try {
+      setError(null);
       const { data } = await axios.get(`${API_BASE}/collections`);
       setCollections(data);
     } catch (err) {
       console.error('Failed to fetch collections', err);
+      setError(err.message || 'Failed to load collections');
     } finally {
       setLoading(false);
     }
@@ -102,6 +106,12 @@ const Marketplace = () => {
   return (
     <div className="p-8 space-y-8 animate-fade-in pb-32">
       {/* Header / Search */}
+      {error && (
+        <div className="bg-red-500/10 border border-red-500/20 text-red-500 p-4 rounded-2xl text-center font-bold">
+          Error: {error} <br/>
+          <span className="text-xs opacity-70">API: {API_BASE}/collections</span>
+        </div>
+      )}
       <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
         <div className="relative w-full md:w-96 group">
           <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">

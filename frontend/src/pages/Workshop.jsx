@@ -75,7 +75,7 @@ const Workshop = ({ isConnected, userId, credits, setCredits, mintTransaction, u
                       images[cat][tName] = meta.imagePath;
                   } else {
                       // Fallback construction
-                      images[cat][tName] = `${ASSET_BASE}/assets/collections/${targetId}/traits/${cat}/${tName}.png`;
+                      images[cat][tName] = `${ASSET_BASE}/assets/collections/${targetId}/traits/${cat}/${tName}.svg`;
                   }
               });
             }
@@ -237,7 +237,7 @@ const Workshop = ({ isConnected, userId, credits, setCredits, mintTransaction, u
                    // So `t.imagePath` will be undefined!
                    // I need to construct the URL manually: `/assets/collections/${currentCollectionId}/traits/${cat}/${traits[cat]}.png`
                    
-                   const url = imgPath || `${ASSET_BASE}/assets/collections/${currentCollectionId}/traits/${cat}/${traits[cat]}.png`;
+                   const url = imgPath || `${ASSET_BASE}/assets/collections/${currentCollectionId}/traits/${cat}/${traits[cat]}.svg`;
                    
                    return (
                        <img 
@@ -286,7 +286,7 @@ const Workshop = ({ isConnected, userId, credits, setCredits, mintTransaction, u
               const rc = RARITY_COLORS.Common;
               const traitName = traits[cat];
               // Construct URL again
-              const imgUrl = `${ASSET_BASE}/assets/collections/${currentCollectionId}/traits/${cat}/${traitName}.png`;
+              const imgUrl = `${ASSET_BASE}/assets/collections/${currentCollectionId}/traits/${cat}/${traitName}.svg`;
               
               return (
                 <div key={cat} className="flex items-center gap-3 bg-white/[0.02] p-3 rounded-2xl border border-white/5 hover:border-doge/20 transition-all">
