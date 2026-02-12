@@ -149,7 +149,7 @@ const getEngine = (collectionId) => {
 };
 
 // Default collection
-let currentCollectionId = 'doge-punk';
+let currentCollectionId = 'doge-punks';
 let engine = getEngine(currentCollectionId);
 const inscriber = new DogeInscriber({ rpcUrl: process.env.DOGE_RPC_URL });
 

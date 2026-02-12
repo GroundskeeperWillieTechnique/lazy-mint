@@ -45,7 +45,7 @@ const Workshop = ({ isConnected, userId, credits, setCredits, mintTransaction, u
       let targetId = collectionId;
       if (!targetId) {
           // Default to first available or fallback
-          targetId = cols.length > 0 ? (cols[0].id || cols[0].slug) : 'doge-punk';
+          targetId = cols.length > 0 ? (cols[0].id || cols[0].slug) : 'doge-punks';
       }
       
       setCurrentCollectionId(targetId);
@@ -75,7 +75,8 @@ const Workshop = ({ isConnected, userId, credits, setCredits, mintTransaction, u
                       images[cat][tName] = meta.imagePath;
                   } else {
                       // Fallback construction
-                      images[cat][tName] = `${ASSET_BASE}/assets/collections/${targetId}/traits/${cat}/${tName}.svg`;
+                      const safeName = tName.replace(/\s+/g, '_');
+                      images[cat][tName] = `${ASSET_BASE}/assets/collections/${targetId}/traits/${cat}/${safeName}.svg`;
                   }
               });
             }
@@ -237,7 +238,8 @@ const Workshop = ({ isConnected, userId, credits, setCredits, mintTransaction, u
                    // So `t.imagePath` will be undefined!
                    // I need to construct the URL manually: `/assets/collections/${currentCollectionId}/traits/${cat}/${traits[cat]}.png`
                    
-                   const url = imgPath || `${ASSET_BASE}/assets/collections/${currentCollectionId}/traits/${cat}/${traits[cat]}.svg`;
+                   const safeTrait = traits[cat].replace(/\s+/g, '_');
+                   const url = imgPath || `${ASSET_BASE}/assets/collections/${currentCollectionId}/traits/${cat}/${safeTrait}.svg`;
                    
                    return (
                        <img 
@@ -286,7 +288,8 @@ const Workshop = ({ isConnected, userId, credits, setCredits, mintTransaction, u
               const rc = RARITY_COLORS.Common;
               const traitName = traits[cat];
               // Construct URL again
-              const imgUrl = `${ASSET_BASE}/assets/collections/${currentCollectionId}/traits/${cat}/${traitName}.svg`;
+              const safeTraitName = traitName.replace(/\s+/g, '_');
+              const imgUrl = `${ASSET_BASE}/assets/collections/${currentCollectionId}/traits/${cat}/${safeTraitName}.svg`;
               
               return (
                 <div key={cat} className="flex items-center gap-3 bg-white/[0.02] p-3 rounded-2xl border border-white/5 hover:border-doge/20 transition-all">

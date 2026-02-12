@@ -1,3 +1,4 @@
+/* Tailwind CSS directives - safe to ignore custom at-rule warnings */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
