@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Filter, TrendingUp, ChevronLeft, ShoppingCart, Loader, RefreshCw } from 'lucide-react';
 import axios from 'axios';
+import DogeMasterLogo from '../assets/doge-master-logo.png';
 
 const API_BASE = import.meta.env.VITE_API_URL || '/api';
 const ASSET_BASE = import.meta.env.VITE_ASSET_URL || '';
@@ -194,9 +195,14 @@ const Marketplace = () => {
               className="group bg-[#111] border border-white/5 rounded-3xl p-4 hover:border-doge/30 transition-all hover:shadow-[0_0_30px_rgba(251,191,36,0.1)] hover:-translate-y-1 cursor-pointer"
             >
               <div className="h-48 w-full bg-gradient-to-br from-doge/10 to-purple-600/10 rounded-2xl mb-4 overflow-hidden relative flex items-center justify-center">
-                 <span className="text-6xl font-black text-white/10 group-hover:text-doge/30 transition-all duration-500 group-hover:scale-110">
-                   {col.symbol || col.name[0]}
-                 </span>
+                 {col.id === 'doge-master' ? (
+                   <img src={DogeMasterLogo} alt={col.name} className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" />
+                 ) : (
+                   <span className="text-6xl font-black text-white/10 group-hover:text-doge/30 transition-all duration-500 group-hover:scale-110">
+                     {col.symbol || col.name[0]}
+                   </span>
+                 )}
+
                  <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-black border border-white/10">
                    {(col.totalSupply || col.supply || 0).toLocaleString()} NFTs
                  </div>
