@@ -59,6 +59,7 @@ const InAppWallet = ({ onConnect, onDisconnect, isOpen, onClose }) => {
   const saveWallet = (w) => {
     setWallet(w);
     localStorage.setItem('lazy_doge_wallet', JSON.stringify(w));
+    localStorage.setItem('wallet_mode', 'lazy'); // Ensure mode is saved!
     setView('main');
     fetchBalance(w.address);
     onConnect(w);
@@ -104,37 +105,40 @@ const InAppWallet = ({ onConnect, onDisconnect, isOpen, onClose }) => {
   // If no wallet is set, show Create/Import options
   if (!wallet) {
     return (
-      <div className="p-6 bg-[#111] text-white rounded-3xl border border-white/10 w-full max-w-sm mx-auto shadow-2xl flex flex-col items-center text-center">
-        <h3 className="text-xl font-black mb-6 flex items-center gap-2 justify-center">
-          <Wallet className="text-doge" /> Doge Wallet
+      <div className="p-8 bg-[#111] text-white rounded-3xl border border-white/10 w-full max-w-sm mx-auto shadow-2xl flex flex-col items-center justify-center text-center animate-fade-in min-h-[400px]">
+        <h3 className="text-2xl font-black mb-8 flex items-center gap-3 justify-center">
+          <Wallet className="text-doge" size={28} /> Doge Wallet
         </h3>
         
         {view === 'main' && (
-          <div className="space-y-4">
+          <div className="space-y-6 w-full">
             <button onClick={() => {
               if (window.confirm('⚠️ Generate new Dogecoin wallet?\n\nYour private key will be stored in this browser.\nBack it up immediately!\n\nContinue?')) {
                 handleCreate();
               }
-            }} className="w-full py-4 bg-doge text-black rounded-xl font-black flex items-center justify-center gap-2 hover:scale-105 transition-all text-sm">
-              <Sparkles size={18} /> CREATE WALLET
+            }} className="w-full py-6 bg-doge text-black rounded-2xl font-black flex items-center justify-center gap-3 hover:scale-105 transition-all text-lg shadow-lg shadow-doge/20">
+              <Sparkles size={24} /> CREATE WALLET
             </button>
-            <button onClick={() => setView('import')} className="w-full py-4 bg-white/5 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-white/10 transition-all text-sm">
-              <Download size={18} /> IMPORT KEY
+            <button onClick={() => setView('import')} className="w-full py-5 bg-white/5 text-white rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-white/10 transition-all text-base border border-white/5">
+              <Download size={22} /> IMPORT KEY
             </button>
           </div>
         )}
 
         {view === 'import' && (
-          <div className="space-y-4 animate-fade-in">
-            <textarea 
-              value={importKey}
-              onChange={(e) => setImportKey(e.target.value)}
-              placeholder="Paste WIF Private Key here..."
-              className="w-full bg-black/50 p-4 rounded-xl text-xs font-mono border border-white/10 focus:border-doge/50 outline-none h-24 resize-none"
-            />
-            <div className="flex gap-2">
-              <button onClick={handleImport} className="flex-1 py-3 bg-doge text-black rounded-xl font-bold">IMPORT</button>
-              <button onClick={() => setView('main')} className="px-4 py-3 bg-white/5 rounded-xl text-gray-400">Cancel</button>
+          <div className="space-y-6 w-full animate-fade-in">
+            <div className="space-y-2">
+              <label className="text-[10px] uppercase font-black text-gray-500 tracking-widest">Enter WIF Private Key</label>
+              <textarea 
+                value={importKey}
+                onChange={(e) => setImportKey(e.target.value)}
+                placeholder="Paste key here..."
+                className="w-full bg-black/50 p-5 rounded-2xl text-xs font-mono border border-white/10 focus:border-doge/50 outline-none h-32 resize-none"
+              />
+            </div>
+            <div className="flex gap-3">
+              <button onClick={handleImport} className="flex-1 py-4 bg-doge text-black rounded-xl font-black text-sm">IMPORT</button>
+              <button onClick={() => setView('main')} className="px-6 py-4 bg-white/5 rounded-xl text-gray-400 font-bold text-sm">Cancel</button>
             </div>
           </div>
         )}

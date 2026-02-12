@@ -260,14 +260,7 @@ const Workshop = ({ isConnected, userId, credits, setCredits, mintTransaction, u
               </div>
             )}
 
-            {!isConnected && !isShuffling && (
-              <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black/90 to-transparent flex flex-col items-center gap-2 z-10">
-                <span className="text-xl font-black text-white px-6 py-2 rounded-xl bg-doge/10 backdrop-blur-xl border border-doge/20">
-                  {collectionInfo.name || 'Lazy Mint'}
-                </span>
-                <span className="text-gray-400 text-sm">Connect wallet to start minting</span>
-              </div>
-            )}
+
           </div>
         </div>
       </div>

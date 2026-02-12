@@ -149,8 +149,13 @@ const getEngine = (collectionId) => {
 };
 
 // Default collection
-let currentCollectionId = 'doge-punks';
-let engine = getEngine(currentCollectionId);
+let currentCollectionId = 'doge-master'; // Updated default
+let engine = null;
+try {
+  engine = getEngine(currentCollectionId);
+} catch (e) {
+  console.warn(`[SERVER] Default collection ${currentCollectionId} not found at startup.`);
+}
 const inscriber = new DogeInscriber({ rpcUrl: process.env.DOGE_RPC_URL });
 
 // ─── API Routes ────────────────────────────────────────────────
@@ -175,6 +180,7 @@ app.get('/api/collections', (req, res) => {
 // Current collection info
 app.get('/api/collection/info', (req, res) => {
   try {
+    if (!engine) return res.status(404).json({ error: 'No collection active' });
     const infoPath = path.join(engine.collectionDir, 'info.json');
     const info = JSON.parse(fs.readFileSync(infoPath, 'utf8'));
     res.json({ ...info, categories: engine.categories, traitMetadata: engine.traitMetadata });
@@ -186,6 +192,7 @@ app.get('/api/collection/info', (req, res) => {
 // Get trait image paths
 app.get('/api/collection/trait-images', (req, res) => {
   try {
+    if (!engine) return res.status(404).json({ error: 'No collection active' });
     const images = {};
     for (const [category, traits] of Object.entries(engine.traitMetadata)) {
       images[category] = {};

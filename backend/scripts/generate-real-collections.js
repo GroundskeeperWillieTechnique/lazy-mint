@@ -253,8 +253,8 @@ function assignRarity(idx, total) {
 // ── Collection definitions ──
 const collections = [
   {
-    slug: 'doginal-dogs', name: 'Doginal Dogs', symbol: 'DD', supply: 10000,
-    description: 'The iconic 10,000 pixel-art dogs inscribed on the Dogecoin blockchain. The largest Doginals collection.',
+    slug: 'doge-master', name: 'Doge Master Collection', symbol: 'MASTER', supply: 10000,
+    description: 'The definitive Doginals collection, combining all high-quality traits into one master set.',
     categories: {
       Background: Object.keys(bgSvgs),
       Fur: Object.keys(dogeBodies),
@@ -263,62 +263,6 @@ const collections = [
       Hat: Object.keys(hatSvgs),
       Clothes: Object.keys(clothesSvgs),
       Accessory: Object.keys(neckSvgs),
-    }
-  },
-  {
-    slug: 'doge-punks', name: 'Doge Punks', symbol: 'DPK', supply: 10000,
-    description: 'A byte-perfect CryptoPunks clone on the Dogecoin blockchain. 10,000 unique Doginals.',
-    categories: {
-      Background: ['Midnight Blue','Sunset Orange','Neon Purple','Crimson','Void Black'],
-      Fur: ['Tan','Brown','Black','Gray','Golden'],
-      Eyes: ['Normal','Sunglasses','Laser','Cyber Visor','Bloodshot'],
-      Mouth: ['Smile','Grin','Cigar','Bone'],
-      Hat: ['None','Crown','Top Hat','Cap','Pirate'],
-      Clothes: ['None','Hoodie','Tuxedo','Armor'],
-    }
-  },
-  {
-    slug: 'doge-rocks', name: 'Doge Rocks', symbol: 'DRK', supply: 100,
-    description: 'Only 100 rocks exist. The rarest Doginals collection on the blockchain.',
-    categories: {
-      Background: ['Ocean','Arctic','Gold Rush','Void Black'],
-      Fur: ['Golden','White','Gray'],
-      Eyes: ['Normal','Dollar Signs','Sleepy'],
-      Hat: ['Crown','Halo','None'],
-    }
-  },
-  {
-    slug: 'ordinal-doges', name: 'Ordinal Doges', symbol: 'OD', supply: 2100,
-    description: '2,100 unique Ordinal Doges — one for every 10,000 Bitcoin ever mined.',
-    categories: {
-      Background: ['Midnight Blue','Neon Purple','Forest Green','Crimson','Cyber Pink'],
-      Fur: ['Tan','Golden','Brown','Red','Cream'],
-      Eyes: ['Normal','Heart Eyes','Laser','Sunglasses','Dollar Signs'],
-      Mouth: ['Smile','Tongue Out','Grin','Pizza'],
-      Hat: ['None','Beanie','Cap','Crown'],
-    }
-  },
-  {
-    slug: 'doge-pixels', name: 'Doge Pixels', symbol: 'DPX', supply: 7777,
-    description: '7,777 pixel warriors ready for battle on the Dogecoin blockchain.',
-    categories: {
-      Background: ['Crimson','Forest Green','Midnight Blue','Gold Rush','Void Black'],
-      Fur: ['Brown','Black','Gray','Red'],
-      Eyes: ['Normal','Cyber Visor','Bloodshot','Laser'],
-      Hat: ['None','Pirate','Cowboy','Top Hat','Cap'],
-      Clothes: ['None','Armor','Chain Mail','Space Suit'],
-    }
-  },
-  {
-    slug: 'shibe-world', name: 'Shibe World', symbol: 'SW', supply: 3333,
-    description: '3,333 Shibes exploring fantastical worlds across the Dogecoin universe.',
-    categories: {
-      Background: ['Ocean','Forest Green','Arctic','Cyber Pink','Sunset Orange','Gold Rush'],
-      Fur: ['Tan','Golden','Cream','White','Brown'],
-      Eyes: ['Normal','Heart Eyes','Sleepy','Sunglasses'],
-      Mouth: ['Smile','Tongue Out','Bone','Pizza'],
-      Hat: ['None','Beanie','Crown','Halo','Cowboy'],
-      Accessory: ['None','Gold Chain','Scarf','Bow Tie'],
     }
   }
 ];
@@ -348,20 +292,18 @@ function getTraitSvg(category, traitName) {
 
 // ── Main generation ──
 function generate() {
-  if (!fs.existsSync(ROOT)) fs.mkdirSync(ROOT, { recursive: true });
-
-  // Remove old mock collections first
-  const oldMocks = ['doge-apes','doge-pixels','doge-punks','doge-rocks','ordinal-doges','shibe-world'];
-  oldMocks.forEach(slug => {
-    const dir = path.join(ROOT, slug);
-    if (fs.existsSync(dir)) {
-      fs.rmSync(dir, { recursive: true, force: true });
-      console.log(`  Removed old mock: ${slug}`);
-    }
-  });
+  const MASTER_ROOT = path.join(__dirname, '../data/master_traits');
+  if (!fs.existsSync(MASTER_ROOT)) fs.mkdirSync(MASTER_ROOT, { recursive: true });
+  
+  // Clear live collections folder (remove from site)
+  if (fs.existsSync(ROOT)) {
+    fs.rmSync(ROOT, { recursive: true, force: true });
+    fs.mkdirSync(ROOT, { recursive: true });
+    console.log("🧹 Cleared live collections - site will be empty as requested.");
+  }
 
   collections.forEach(col => {
-    const dir = path.join(ROOT, col.slug);
+    const dir = path.join(MASTER_ROOT, col.slug);
     const traitsDir = path.join(dir, 'traits');
     if (fs.existsSync(dir)) fs.rmSync(dir, { recursive: true, force: true });
     fs.mkdirSync(traitsDir, { recursive: true });

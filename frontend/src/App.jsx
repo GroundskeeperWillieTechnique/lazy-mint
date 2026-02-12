@@ -26,19 +26,21 @@ function App() {
   const [showInAppWallet, setShowInAppWallet] = useState(false);
   const [inAppWalletObject, setInAppWalletObject] = useState(null);
 
-  // Load Lazy Wallet on mount if exists (but don't auto-connect unless desired?)
-  // For now, let's auto-load if previously connected via lazy
+  // Load Lazy Wallet on mount if exists
   useEffect(() => {
     fetchCollections();
     const savedMode = localStorage.getItem('wallet_mode');
-    if (savedMode === 'lazy') {
-       // InAppWallet component handles loading from localstorage and calling onConnect
-       // We just need to make sure we set mode so we know.
-       // But InAppWallet isn't rendered unless we show it? 
-       // Actually, we should render InAppWallet hidden or just rely on it?
-       // Let's render it always if mode is lazy, but hidden?
-       // Better: Just let InAppWallet logic run.
-       setWalletMode('lazy'); 
+    const savedWallet = localStorage.getItem('lazy_doge_wallet');
+    
+    if (savedMode === 'lazy' && savedWallet) {
+      try {
+        const parsed = JSON.parse(savedWallet);
+        setInAppWalletObject(parsed);
+        setIsConnected(true);
+        setWalletMode('lazy');
+      } catch (e) {
+        console.error("Failed to auto-load wallet", e);
+      }
     }
   }, []);
 
