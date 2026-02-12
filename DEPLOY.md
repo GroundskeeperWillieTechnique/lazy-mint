@@ -1,6 +1,7 @@
 # Deploy Lazy Minter to Render.com (Free Tier)
 
 ## Prerequisites
+
 - GitHub account
 - Render.com account (free)
 
@@ -9,12 +10,7 @@
 Your code is ready and committed locally. Now push it to GitHub:
 
 ```bash
-# Create a new repo on GitHub.com (via web browser):
-# 1. Go to https://github.com/new
-# 2. Repository name: lazy-minter
-# 3. Make it Public
-# 4. Don't initialize with README (we already have code)
-# 5. Click "Create repository"
+1. Go to your repo on GitHub: <https://github.com/GroundskeeperWillieTechnique/lazy-mint>
 
 # Then run these commands:
 cd "/home/hdx/Pictures/Lazy Minter"

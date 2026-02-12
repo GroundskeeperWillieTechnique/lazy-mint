@@ -38,7 +38,7 @@ cd backend && npm start
 cd frontend && npm run dev
 ```
 
-Visit http://localhost:4000
+Visit <http://localhost:4000>
 
 ### Production Build
 
@@ -50,7 +50,7 @@ cd frontend && npm run build
 cd backend && node server.js
 ```
 
-Visit http://localhost:4001
+Visit <http://localhost:4001>
 
 ## Deploy to Render.com
 
@@ -58,7 +58,7 @@ See [DEPLOY.md](./DEPLOY.md) for complete deployment instructions.
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
-## License
+### License
 
 MIT
 
