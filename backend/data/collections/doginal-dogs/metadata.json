@@ -1,0 +1,336 @@
+{
+  "traits": {
+    "Background": [
+      {
+        "name": "Midnight Blue",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Background/Midnight_Blue.svg"
+      },
+      {
+        "name": "Sunset Orange",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Background/Sunset_Orange.svg"
+      },
+      {
+        "name": "Neon Purple",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Background/Neon_Purple.svg"
+      },
+      {
+        "name": "Forest Green",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Background/Forest_Green.svg"
+      },
+      {
+        "name": "Crimson",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Background/Crimson.svg"
+      },
+      {
+        "name": "Arctic",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Arctic.svg"
+      },
+      {
+        "name": "Gold Rush",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Gold_Rush.svg"
+      },
+      {
+        "name": "Void Black",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Void_Black.svg"
+      },
+      {
+        "name": "Cyber Pink",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Cyber_Pink.svg"
+      },
+      {
+        "name": "Ocean",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Ocean.svg"
+      }
+    ],
+    "Fur": [
+      {
+        "name": "Tan",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Fur/Tan.svg"
+      },
+      {
+        "name": "Golden",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Fur/Golden.svg"
+      },
+      {
+        "name": "Brown",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Fur/Brown.svg"
+      },
+      {
+        "name": "Gray",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Fur/Gray.svg"
+      },
+      {
+        "name": "White",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Fur/White.svg"
+      },
+      {
+        "name": "Black",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Fur/Black.svg"
+      },
+      {
+        "name": "Red",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Fur/Red.svg"
+      },
+      {
+        "name": "Cream",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Fur/Cream.svg"
+      }
+    ],
+    "Eyes": [
+      {
+        "name": "Normal",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Eyes/Normal.svg"
+      },
+      {
+        "name": "Sunglasses",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Eyes/Sunglasses.svg"
+      },
+      {
+        "name": "Laser",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Eyes/Laser.svg"
+      },
+      {
+        "name": "Heart Eyes",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Eyes/Heart_Eyes.svg"
+      },
+      {
+        "name": "Sleepy",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Eyes/Sleepy.svg"
+      },
+      {
+        "name": "Dollar Signs",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Eyes/Dollar_Signs.svg"
+      },
+      {
+        "name": "Cyber Visor",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Eyes/Cyber_Visor.svg"
+      },
+      {
+        "name": "Bloodshot",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Eyes/Bloodshot.svg"
+      }
+    ],
+    "Mouth": [
+      {
+        "name": "Smile",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Mouth/Smile.svg"
+      },
+      {
+        "name": "Tongue Out",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Mouth/Tongue_Out.svg"
+      },
+      {
+        "name": "Grin",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Mouth/Grin.svg"
+      },
+      {
+        "name": "Cigar",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Mouth/Cigar.svg"
+      },
+      {
+        "name": "Bone",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Mouth/Bone.svg"
+      },
+      {
+        "name": "Pizza",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Mouth/Pizza.svg"
+      }
+    ],
+    "Hat": [
+      {
+        "name": "None",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Hat/None.svg"
+      },
+      {
+        "name": "Crown",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Hat/Crown.svg"
+      },
+      {
+        "name": "Beanie",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Hat/Beanie.svg"
+      },
+      {
+        "name": "Top Hat",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Hat/Top_Hat.svg"
+      },
+      {
+        "name": "Cap",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Hat/Cap.svg"
+      },
+      {
+        "name": "Cowboy",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Hat/Cowboy.svg"
+      },
+      {
+        "name": "Pirate",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Hat/Pirate.svg"
+      },
+      {
+        "name": "Halo",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Hat/Halo.svg"
+      }
+    ],
+    "Clothes": [
+      {
+        "name": "None",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Clothes/None.svg"
+      },
+      {
+        "name": "Hoodie",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Clothes/Hoodie.svg"
+      },
+      {
+        "name": "Tuxedo",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Clothes/Tuxedo.svg"
+      },
+      {
+        "name": "Hawaiian",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Clothes/Hawaiian.svg"
+      },
+      {
+        "name": "Armor",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Clothes/Armor.svg"
+      },
+      {
+        "name": "Chain Mail",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Clothes/Chain_Mail.svg"
+      },
+      {
+        "name": "Space Suit",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Clothes/Space_Suit.svg"
+      }
+    ],
+    "Accessory": [
+      {
+        "name": "None",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Accessory/None.svg"
+      },
+      {
+        "name": "Gold Chain",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Accessory/Gold_Chain.svg"
+      },
+      {
+        "name": "Silver Chain",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Accessory/Silver_Chain.svg"
+      },
+      {
+        "name": "Bandana",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Accessory/Bandana.svg"
+      },
+      {
+        "name": "Bow Tie",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Accessory/Bow_Tie.svg"
+      },
+      {
+        "name": "Scarf",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Accessory/Scarf.svg"
+      }
+    ]
+  }
+}

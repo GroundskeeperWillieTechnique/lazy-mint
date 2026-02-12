@@ -1,0 +1,24 @@
+{
+  "id": "doge-punk",
+  "name": "Doge Punk Originals",
+  "symbol": "DPO",
+  "description": "The original generative Punk collection built for the Dogecoin blockchain. 10,000 unique Doginals with rarity-weighted traits.",
+  "totalSupply": 10000,
+  "mintPrice": 100,
+  "traitCount": 46,
+  "categories": [
+    "Background",
+    "Fur",
+    "Eyes",
+    "Mouth",
+    "Hat",
+    "Clothes",
+    "Neck"
+  ],
+  "rarityTiers": [
+    "Legendary",
+    "Rare",
+    "Uncommon",
+    "Common"
+  ]
+}

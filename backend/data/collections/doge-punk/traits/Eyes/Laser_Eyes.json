@@ -1,0 +1,11 @@
+{
+  "name": "Laser Eyes",
+  "category": "Eyes",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Laser_Eyes.svg",
+  "attributes": {
+    "color": "#ff0000",
+    "glow": true
+  }
+}

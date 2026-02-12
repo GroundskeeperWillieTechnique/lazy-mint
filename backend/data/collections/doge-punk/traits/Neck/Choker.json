@@ -1,0 +1,10 @@
+{
+  "name": "Choker",
+  "category": "Neck",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Choker.svg",
+  "attributes": {
+    "color": "#1a1a1a"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Beanie",
+  "category": "Hat",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Beanie.svg",
+  "attributes": {
+    "variant": "beanie",
+    "color": "#ff5722"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Silver Chain",
+  "category": "Neck",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Silver_Chain.svg",
+  "attributes": {
+    "variant": "silver",
+    "color": "#e0e0e0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "White",
+  "category": "Fur",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "White.svg",
+  "attributes": {
+    "variant": "white"
+  }
+}

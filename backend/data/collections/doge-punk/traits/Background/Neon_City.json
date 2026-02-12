@@ -1,0 +1,14 @@
+{
+  "name": "Neon City",
+  "category": "Background",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Neon_City.svg",
+  "attributes": {
+    "colors": [
+      "#0f0c29",
+      "#302b63",
+      "#24243e"
+    ]
+  }
+}

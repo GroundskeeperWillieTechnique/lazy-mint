@@ -1,0 +1,14 @@
+{
+  "name": "Galaxy",
+  "category": "Background",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Galaxy.svg",
+  "attributes": {
+    "colors": [
+      "#0f0024",
+      "#1a0040",
+      "#2d0066"
+    ]
+  }
+}

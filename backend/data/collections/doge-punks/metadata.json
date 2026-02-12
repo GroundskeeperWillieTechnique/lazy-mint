@@ -1,0 +1,184 @@
+{
+  "traits": {
+    "Background": [
+      {
+        "name": "Midnight Blue",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Background/Midnight_Blue.svg"
+      },
+      {
+        "name": "Sunset Orange",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Background/Sunset_Orange.svg"
+      },
+      {
+        "name": "Neon Purple",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Background/Neon_Purple.svg"
+      },
+      {
+        "name": "Crimson",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Crimson.svg"
+      },
+      {
+        "name": "Void Black",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Void_Black.svg"
+      }
+    ],
+    "Fur": [
+      {
+        "name": "Tan",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Fur/Tan.svg"
+      },
+      {
+        "name": "Brown",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Fur/Brown.svg"
+      },
+      {
+        "name": "Black",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Fur/Black.svg"
+      },
+      {
+        "name": "Gray",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Fur/Gray.svg"
+      },
+      {
+        "name": "Golden",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Fur/Golden.svg"
+      }
+    ],
+    "Eyes": [
+      {
+        "name": "Normal",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Eyes/Normal.svg"
+      },
+      {
+        "name": "Sunglasses",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Eyes/Sunglasses.svg"
+      },
+      {
+        "name": "Laser",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Eyes/Laser.svg"
+      },
+      {
+        "name": "Cyber Visor",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Eyes/Cyber_Visor.svg"
+      },
+      {
+        "name": "Bloodshot",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Eyes/Bloodshot.svg"
+      }
+    ],
+    "Mouth": [
+      {
+        "name": "Smile",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Mouth/Smile.svg"
+      },
+      {
+        "name": "Grin",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Mouth/Grin.svg"
+      },
+      {
+        "name": "Cigar",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Mouth/Cigar.svg"
+      },
+      {
+        "name": "Bone",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Mouth/Bone.svg"
+      }
+    ],
+    "Hat": [
+      {
+        "name": "None",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Hat/None.svg"
+      },
+      {
+        "name": "Crown",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Hat/Crown.svg"
+      },
+      {
+        "name": "Top Hat",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Hat/Top_Hat.svg"
+      },
+      {
+        "name": "Cap",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Hat/Cap.svg"
+      },
+      {
+        "name": "Pirate",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Hat/Pirate.svg"
+      }
+    ],
+    "Clothes": [
+      {
+        "name": "None",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Clothes/None.svg"
+      },
+      {
+        "name": "Hoodie",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Clothes/Hoodie.svg"
+      },
+      {
+        "name": "Tuxedo",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Clothes/Tuxedo.svg"
+      },
+      {
+        "name": "Armor",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Clothes/Armor.svg"
+      }
+    ]
+  }
+}

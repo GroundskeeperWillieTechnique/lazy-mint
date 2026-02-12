@@ -1,0 +1,10 @@
+{
+  "name": "Tan",
+  "category": "Fur",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Tan.svg",
+  "attributes": {
+    "variant": "tan"
+  }
+}

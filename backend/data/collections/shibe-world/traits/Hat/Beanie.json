@@ -1,0 +1,10 @@
+{
+  "name": "Beanie",
+  "category": "Hat",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Beanie.svg",
+  "attributes": {
+    "variant": "beanie"
+  }
+}

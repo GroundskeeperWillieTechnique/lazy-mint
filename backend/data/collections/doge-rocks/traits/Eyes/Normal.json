@@ -1,0 +1,10 @@
+{
+  "name": "Normal",
+  "category": "Eyes",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Normal.svg",
+  "attributes": {
+    "variant": "normal"
+  }
+}

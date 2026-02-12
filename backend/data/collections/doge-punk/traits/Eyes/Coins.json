@@ -1,0 +1,10 @@
+{
+  "name": "Coins",
+  "category": "Eyes",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Coins.svg",
+  "attributes": {
+    "variant": "coins"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "ordinal-doges",
+  "name": "Ordinal Doges",
+  "symbol": "OD",
+  "description": "2,100 unique Ordinal Doges — one for every 10,000 Bitcoin ever mined.",
+  "totalSupply": 2100,
+  "mintPrice": 100,
+  "traitCount": 23,
+  "categories": [
+    "Background",
+    "Fur",
+    "Eyes",
+    "Mouth",
+    "Hat"
+  ],
+  "rarityTiers": [
+    "Legendary",
+    "Rare",
+    "Uncommon",
+    "Common"
+  ]
+}

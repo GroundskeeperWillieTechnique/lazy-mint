@@ -1,0 +1,10 @@
+{
+  "name": "Kimono",
+  "category": "Clothes",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Kimono.svg",
+  "attributes": {
+    "color": "#ad1457"
+  }
+}

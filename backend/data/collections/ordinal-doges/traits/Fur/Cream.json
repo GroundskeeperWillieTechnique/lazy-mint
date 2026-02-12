@@ -1,0 +1,10 @@
+{
+  "name": "Cream",
+  "category": "Fur",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Cream.svg",
+  "attributes": {
+    "variant": "cream"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Dollar Signs",
+  "category": "Eyes",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Dollar_Signs.svg",
+  "attributes": {
+    "color": "#4caf50",
+    "shape": "dollar"
+  }
+}

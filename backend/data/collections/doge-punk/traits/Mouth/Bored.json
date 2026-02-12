@@ -1,0 +1,10 @@
+{
+  "name": "Bored",
+  "category": "Mouth",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Bored.svg",
+  "attributes": {
+    "variant": "bored"
+  }
+}

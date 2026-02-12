@@ -1,0 +1,10 @@
+{
+  "name": "Ocean",
+  "category": "Background",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Ocean.svg",
+  "attributes": {
+    "variant": "ocean"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Cyber Pink",
+  "category": "Background",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Cyber_Pink.svg",
+  "attributes": {
+    "variant": "cyber-pink"
+  }
+}

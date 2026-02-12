@@ -1,0 +1,152 @@
+{
+  "traits": {
+    "Background": [
+      {
+        "name": "Midnight Blue",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Background/Midnight_Blue.svg"
+      },
+      {
+        "name": "Neon Purple",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Background/Neon_Purple.svg"
+      },
+      {
+        "name": "Forest Green",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Background/Forest_Green.svg"
+      },
+      {
+        "name": "Crimson",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Crimson.svg"
+      },
+      {
+        "name": "Cyber Pink",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Cyber_Pink.svg"
+      }
+    ],
+    "Fur": [
+      {
+        "name": "Tan",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Fur/Tan.svg"
+      },
+      {
+        "name": "Golden",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Fur/Golden.svg"
+      },
+      {
+        "name": "Brown",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Fur/Brown.svg"
+      },
+      {
+        "name": "Red",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Fur/Red.svg"
+      },
+      {
+        "name": "Cream",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Fur/Cream.svg"
+      }
+    ],
+    "Eyes": [
+      {
+        "name": "Normal",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Eyes/Normal.svg"
+      },
+      {
+        "name": "Heart Eyes",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Eyes/Heart_Eyes.svg"
+      },
+      {
+        "name": "Laser",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Eyes/Laser.svg"
+      },
+      {
+        "name": "Sunglasses",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Eyes/Sunglasses.svg"
+      },
+      {
+        "name": "Dollar Signs",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Eyes/Dollar_Signs.svg"
+      }
+    ],
+    "Mouth": [
+      {
+        "name": "Smile",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Mouth/Smile.svg"
+      },
+      {
+        "name": "Tongue Out",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Mouth/Tongue_Out.svg"
+      },
+      {
+        "name": "Grin",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Mouth/Grin.svg"
+      },
+      {
+        "name": "Pizza",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Mouth/Pizza.svg"
+      }
+    ],
+    "Hat": [
+      {
+        "name": "None",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Hat/None.svg"
+      },
+      {
+        "name": "Beanie",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Hat/Beanie.svg"
+      },
+      {
+        "name": "Cap",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Hat/Cap.svg"
+      },
+      {
+        "name": "Crown",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Hat/Crown.svg"
+      }
+    ]
+  }
+}

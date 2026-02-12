@@ -1,0 +1,10 @@
+{
+  "name": "Hawaiian",
+  "category": "Clothes",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Hawaiian.svg",
+  "attributes": {
+    "variant": "hawaiian"
+  }
+}

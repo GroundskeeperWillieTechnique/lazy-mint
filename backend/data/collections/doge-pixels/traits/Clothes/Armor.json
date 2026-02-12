@@ -1,0 +1,10 @@
+{
+  "name": "Armor",
+  "category": "Clothes",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Armor.svg",
+  "attributes": {
+    "variant": "armor"
+  }
+}

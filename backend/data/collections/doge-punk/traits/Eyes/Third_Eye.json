@@ -1,0 +1,11 @@
+{
+  "name": "Third Eye",
+  "category": "Eyes",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Third_Eye.svg",
+  "attributes": {
+    "color": "#00bcd4",
+    "glow": true
+  }
+}

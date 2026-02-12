@@ -1,0 +1,10 @@
+{
+  "name": "None",
+  "category": "Hat",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "None.svg",
+  "attributes": {
+    "variant": "none"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Arctic",
+  "category": "Background",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Arctic.svg",
+  "attributes": {
+    "variant": "arctic"
+  }
+}

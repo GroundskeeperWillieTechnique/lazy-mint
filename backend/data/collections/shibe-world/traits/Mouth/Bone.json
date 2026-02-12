@@ -1,0 +1,10 @@
+{
+  "name": "Bone",
+  "category": "Mouth",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Bone.svg",
+  "attributes": {
+    "variant": "bone"
+  }
+}

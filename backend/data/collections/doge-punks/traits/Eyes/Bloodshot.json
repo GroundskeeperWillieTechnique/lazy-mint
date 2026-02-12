@@ -1,0 +1,10 @@
+{
+  "name": "Bloodshot",
+  "category": "Eyes",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Bloodshot.svg",
+  "attributes": {
+    "variant": "bloodshot"
+  }
+}

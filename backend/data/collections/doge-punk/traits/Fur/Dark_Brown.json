@@ -1,0 +1,10 @@
+{
+  "name": "Dark Brown",
+  "category": "Fur",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Dark_Brown.svg",
+  "attributes": {
+    "color": "#3e2723"
+  }
+}

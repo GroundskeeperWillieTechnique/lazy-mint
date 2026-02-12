@@ -1,0 +1,22 @@
+{
+  "id": "doge-pixels",
+  "name": "Doge Pixels",
+  "symbol": "DPX",
+  "description": "7,777 pixel warriors ready for battle on the Dogecoin blockchain.",
+  "totalSupply": 7777,
+  "mintPrice": 100,
+  "traitCount": 22,
+  "categories": [
+    "Background",
+    "Fur",
+    "Eyes",
+    "Hat",
+    "Clothes"
+  ],
+  "rarityTiers": [
+    "Legendary",
+    "Rare",
+    "Uncommon",
+    "Common"
+  ]
+}

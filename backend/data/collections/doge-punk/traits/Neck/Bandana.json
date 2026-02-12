@@ -1,0 +1,10 @@
+{
+  "name": "Bandana",
+  "category": "Neck",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Bandana.svg",
+  "attributes": {
+    "color": "#d32f2f"
+  }
+}

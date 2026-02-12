@@ -1,0 +1,11 @@
+{
+  "name": "Prison Jumpsuit",
+  "category": "Clothes",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Prison_Jumpsuit.svg",
+  "attributes": {
+    "variant": "prison",
+    "color": "#ff9800"
+  }
+}

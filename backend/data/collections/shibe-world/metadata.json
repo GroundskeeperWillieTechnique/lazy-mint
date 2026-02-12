@@ -1,0 +1,184 @@
+{
+  "traits": {
+    "Background": [
+      {
+        "name": "Ocean",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Background/Ocean.svg"
+      },
+      {
+        "name": "Forest Green",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Background/Forest_Green.svg"
+      },
+      {
+        "name": "Arctic",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Background/Arctic.svg"
+      },
+      {
+        "name": "Cyber Pink",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Background/Cyber_Pink.svg"
+      },
+      {
+        "name": "Sunset Orange",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Sunset_Orange.svg"
+      },
+      {
+        "name": "Gold Rush",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Gold_Rush.svg"
+      }
+    ],
+    "Fur": [
+      {
+        "name": "Tan",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Fur/Tan.svg"
+      },
+      {
+        "name": "Golden",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Fur/Golden.svg"
+      },
+      {
+        "name": "Cream",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Fur/Cream.svg"
+      },
+      {
+        "name": "White",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Fur/White.svg"
+      },
+      {
+        "name": "Brown",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Fur/Brown.svg"
+      }
+    ],
+    "Eyes": [
+      {
+        "name": "Normal",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Eyes/Normal.svg"
+      },
+      {
+        "name": "Heart Eyes",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Eyes/Heart_Eyes.svg"
+      },
+      {
+        "name": "Sleepy",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Eyes/Sleepy.svg"
+      },
+      {
+        "name": "Sunglasses",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Eyes/Sunglasses.svg"
+      }
+    ],
+    "Mouth": [
+      {
+        "name": "Smile",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Mouth/Smile.svg"
+      },
+      {
+        "name": "Tongue Out",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Mouth/Tongue_Out.svg"
+      },
+      {
+        "name": "Bone",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Mouth/Bone.svg"
+      },
+      {
+        "name": "Pizza",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Mouth/Pizza.svg"
+      }
+    ],
+    "Hat": [
+      {
+        "name": "None",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Hat/None.svg"
+      },
+      {
+        "name": "Beanie",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Hat/Beanie.svg"
+      },
+      {
+        "name": "Crown",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Hat/Crown.svg"
+      },
+      {
+        "name": "Halo",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Hat/Halo.svg"
+      },
+      {
+        "name": "Cowboy",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Hat/Cowboy.svg"
+      }
+    ],
+    "Accessory": [
+      {
+        "name": "None",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Accessory/None.svg"
+      },
+      {
+        "name": "Gold Chain",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Accessory/Gold_Chain.svg"
+      },
+      {
+        "name": "Scarf",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Accessory/Scarf.svg"
+      },
+      {
+        "name": "Bow Tie",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Accessory/Bow_Tie.svg"
+      }
+    ]
+  }
+}

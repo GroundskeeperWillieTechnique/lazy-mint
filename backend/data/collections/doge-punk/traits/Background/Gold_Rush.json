@@ -1,0 +1,14 @@
+{
+  "name": "Gold Rush",
+  "category": "Background",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Gold_Rush.svg",
+  "attributes": {
+    "colors": [
+      "#3d2b00",
+      "#6b4c00",
+      "#a07800"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Zombie Punk",
+  "category": "Type",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Zombie_Punk.svg",
+  "attributes": {
+    "skin": "#6b8e4e",
+    "hair": "#2d4a1a"
+  }
+}

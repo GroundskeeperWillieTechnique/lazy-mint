@@ -1,0 +1,10 @@
+{
+  "name": "Bandana",
+  "category": "Accessory",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Bandana.svg",
+  "attributes": {
+    "variant": "bandana"
+  }
+}

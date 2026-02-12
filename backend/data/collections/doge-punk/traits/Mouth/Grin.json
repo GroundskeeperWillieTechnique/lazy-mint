@@ -1,0 +1,10 @@
+{
+  "name": "Grin",
+  "category": "Mouth",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Grin.svg",
+  "attributes": {
+    "variant": "grin"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Space Suit",
+  "category": "Clothes",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Space_Suit.svg",
+  "attributes": {
+    "variant": "space-suit"
+  }
+}

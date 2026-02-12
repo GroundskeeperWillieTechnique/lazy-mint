@@ -1,0 +1,10 @@
+{
+  "name": "Smile",
+  "category": "Mouth",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Smile.svg",
+  "attributes": {
+    "color": "#e8877c"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Vaporwave",
+  "category": "Background",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Vaporwave.svg",
+  "attributes": {
+    "colors": [
+      "#ff6ec7",
+      "#7873f5",
+      "#00d4ff"
+    ]
+  }
+}

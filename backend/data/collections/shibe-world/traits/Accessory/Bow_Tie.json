@@ -1,0 +1,10 @@
+{
+  "name": "Bow Tie",
+  "category": "Accessory",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Bow_Tie.svg",
+  "attributes": {
+    "variant": "bow-tie"
+  }
+}

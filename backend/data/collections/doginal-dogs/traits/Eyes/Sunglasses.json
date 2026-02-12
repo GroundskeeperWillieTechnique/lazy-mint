@@ -1,0 +1,10 @@
+{
+  "name": "Sunglasses",
+  "category": "Eyes",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Sunglasses.svg",
+  "attributes": {
+    "variant": "sunglasses"
+  }
+}

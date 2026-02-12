@@ -1,0 +1,10 @@
+{
+  "name": "Scarf",
+  "category": "Accessory",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Scarf.svg",
+  "attributes": {
+    "variant": "scarf"
+  }
+}

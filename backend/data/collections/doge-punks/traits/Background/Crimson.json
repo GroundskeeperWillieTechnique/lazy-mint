@@ -1,0 +1,10 @@
+{
+  "name": "Crimson",
+  "category": "Background",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Crimson.svg",
+  "attributes": {
+    "variant": "crimson"
+  }
+}

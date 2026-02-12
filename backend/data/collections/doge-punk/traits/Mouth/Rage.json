@@ -1,0 +1,10 @@
+{
+  "name": "Rage",
+  "category": "Mouth",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Rage.svg",
+  "attributes": {
+    "variant": "rage"
+  }
+}

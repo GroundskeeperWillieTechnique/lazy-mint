@@ -1,0 +1,10 @@
+{
+  "name": "Joint",
+  "category": "Mouth",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Joint.svg",
+  "attributes": {
+    "color": "#8d6e63"
+  }
+}

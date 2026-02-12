@@ -1,0 +1,10 @@
+{
+  "name": "Pirate",
+  "category": "Hat",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Pirate.svg",
+  "attributes": {
+    "variant": "pirate"
+  }
+}

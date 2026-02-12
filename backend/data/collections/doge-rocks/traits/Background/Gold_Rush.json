@@ -1,0 +1,10 @@
+{
+  "name": "Gold Rush",
+  "category": "Background",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Gold_Rush.svg",
+  "attributes": {
+    "variant": "gold-rush"
+  }
+}

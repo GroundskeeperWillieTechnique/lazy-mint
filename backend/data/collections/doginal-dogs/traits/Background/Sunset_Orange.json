@@ -1,0 +1,10 @@
+{
+  "name": "Sunset Orange",
+  "category": "Background",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Sunset_Orange.svg",
+  "attributes": {
+    "variant": "sunset-orange"
+  }
+}

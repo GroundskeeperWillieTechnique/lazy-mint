@@ -1,0 +1,11 @@
+{
+  "name": "Hawaii Shirt",
+  "category": "Clothes",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Hawaii_Shirt.svg",
+  "attributes": {
+    "variant": "hawaii",
+    "color": "#ff9800"
+  }
+}

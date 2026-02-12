@@ -1,0 +1,10 @@
+{
+  "name": "Scarf",
+  "category": "Neck",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Scarf.svg",
+  "attributes": {
+    "color": "#7b1fa2"
+  }
+}

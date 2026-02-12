@@ -1,0 +1,10 @@
+{
+  "name": "Diamond Pendant",
+  "category": "Neck",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Diamond_Pendant.svg",
+  "attributes": {
+    "color": "#b3e5fc"
+  }
+}

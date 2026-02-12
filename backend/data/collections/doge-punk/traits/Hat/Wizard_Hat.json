@@ -1,0 +1,10 @@
+{
+  "name": "Wizard Hat",
+  "category": "Hat",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Wizard_Hat.svg",
+  "attributes": {
+    "color": "#673ab7"
+  }
+}

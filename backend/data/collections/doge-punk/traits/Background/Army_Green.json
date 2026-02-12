@@ -1,0 +1,14 @@
+{
+  "name": "Army Green",
+  "category": "Background",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Army_Green.svg",
+  "attributes": {
+    "colors": [
+      "#f0fdf4",
+      "#86efac",
+      "#15803d"
+    ]
+  }
+}

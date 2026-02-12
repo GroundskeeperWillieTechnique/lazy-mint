@@ -1,0 +1,11 @@
+{
+  "name": "Party Hat",
+  "category": "Hat",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Party_Hat.svg",
+  "attributes": {
+    "variant": "party",
+    "color": "#00bcd4"
+  }
+}

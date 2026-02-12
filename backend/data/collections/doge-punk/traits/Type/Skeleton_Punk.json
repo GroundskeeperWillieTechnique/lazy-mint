@@ -1,0 +1,11 @@
+{
+  "name": "Skeleton Punk",
+  "category": "Type",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Skeleton_Punk.svg",
+  "attributes": {
+    "skin": "#f5f5dc",
+    "hair": "#666"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Orange",
+  "category": "Background",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Orange.svg",
+  "attributes": {
+    "colors": [
+      "#fff7ed",
+      "#fdba74",
+      "#ea580c"
+    ]
+  }
+}

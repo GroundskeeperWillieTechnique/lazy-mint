@@ -1,0 +1,14 @@
+{
+  "name": "Yellow",
+  "category": "Background",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Yellow.svg",
+  "attributes": {
+    "colors": [
+      "#fefce8",
+      "#fde047",
+      "#a16207"
+    ]
+  }
+}

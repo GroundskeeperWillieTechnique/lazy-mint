@@ -1,0 +1,10 @@
+{
+  "name": "Cowboy",
+  "category": "Hat",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Cowboy.svg",
+  "attributes": {
+    "variant": "cowboy"
+  }
+}

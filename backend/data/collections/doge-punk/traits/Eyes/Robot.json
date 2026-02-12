@@ -1,0 +1,10 @@
+{
+  "name": "Robot",
+  "category": "Eyes",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Robot.svg",
+  "attributes": {
+    "variant": "robot"
+  }
+}

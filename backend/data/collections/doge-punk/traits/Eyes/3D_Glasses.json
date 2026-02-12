@@ -1,0 +1,10 @@
+{
+  "name": "3D Glasses",
+  "category": "Eyes",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "3D_Glasses.svg",
+  "attributes": {
+    "variant": "3d"
+  }
+}

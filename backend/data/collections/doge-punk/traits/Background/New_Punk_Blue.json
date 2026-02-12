@@ -1,0 +1,14 @@
+{
+  "name": "New Punk Blue",
+  "category": "Background",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "New_Punk_Blue.svg",
+  "attributes": {
+    "colors": [
+      "#e5e7eb",
+      "#3b82f6",
+      "#1e40af"
+    ]
+  }
+}

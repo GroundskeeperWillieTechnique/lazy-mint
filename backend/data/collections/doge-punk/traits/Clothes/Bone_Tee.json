@@ -1,0 +1,11 @@
+{
+  "name": "Bone Tee",
+  "category": "Clothes",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Bone_Tee.svg",
+  "attributes": {
+    "variant": "bone",
+    "color": "#000"
+  }
+}

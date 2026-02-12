@@ -1,0 +1,10 @@
+{
+  "name": "Grill",
+  "category": "Mouth",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Grill.svg",
+  "attributes": {
+    "color": "#ffd700"
+  }
+}

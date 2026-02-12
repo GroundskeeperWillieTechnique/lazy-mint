@@ -1,0 +1,90 @@
+{
+  "traits": {
+    "Background": [
+      {
+        "name": "Ocean",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Background/Ocean.svg"
+      },
+      {
+        "name": "Arctic",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Background/Arctic.svg"
+      },
+      {
+        "name": "Gold Rush",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Background/Gold_Rush.svg"
+      },
+      {
+        "name": "Void Black",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Void_Black.svg"
+      }
+    ],
+    "Fur": [
+      {
+        "name": "Golden",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Fur/Golden.svg"
+      },
+      {
+        "name": "White",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Fur/White.svg"
+      },
+      {
+        "name": "Gray",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Fur/Gray.svg"
+      }
+    ],
+    "Eyes": [
+      {
+        "name": "Normal",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Eyes/Normal.svg"
+      },
+      {
+        "name": "Dollar Signs",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Eyes/Dollar_Signs.svg"
+      },
+      {
+        "name": "Sleepy",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Eyes/Sleepy.svg"
+      }
+    ],
+    "Hat": [
+      {
+        "name": "Crown",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Hat/Crown.svg"
+      },
+      {
+        "name": "Halo",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Hat/Halo.svg"
+      },
+      {
+        "name": "None",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Hat/None.svg"
+      }
+    ]
+  }
+}

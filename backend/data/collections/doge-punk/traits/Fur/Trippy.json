@@ -1,0 +1,11 @@
+{
+  "name": "Trippy",
+  "category": "Fur",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Trippy.svg",
+  "attributes": {
+    "color": "#ff4081",
+    "texture": "psychedelic"
+  }
+}

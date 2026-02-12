@@ -1,0 +1,10 @@
+{
+  "name": "Golden",
+  "category": "Fur",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Golden.svg",
+  "attributes": {
+    "variant": "golden"
+  }
+}

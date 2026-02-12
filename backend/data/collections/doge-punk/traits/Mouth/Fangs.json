@@ -1,0 +1,10 @@
+{
+  "name": "Fangs",
+  "category": "Mouth",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Fangs.svg",
+  "attributes": {
+    "color": "#ffffff"
+  }
+}

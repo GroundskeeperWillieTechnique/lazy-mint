@@ -1,0 +1,10 @@
+{
+  "name": "Forest Green",
+  "category": "Background",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Forest_Green.svg",
+  "attributes": {
+    "variant": "forest-green"
+  }
+}

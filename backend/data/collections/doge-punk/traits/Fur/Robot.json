@@ -1,0 +1,11 @@
+{
+  "name": "Robot",
+  "category": "Fur",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Robot.svg",
+  "attributes": {
+    "color": "#b0bec5",
+    "texture": "metal"
+  }
+}

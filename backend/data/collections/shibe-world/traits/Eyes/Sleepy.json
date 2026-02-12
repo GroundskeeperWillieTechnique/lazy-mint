@@ -1,0 +1,10 @@
+{
+  "name": "Sleepy",
+  "category": "Eyes",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Sleepy.svg",
+  "attributes": {
+    "variant": "sleepy"
+  }
+}

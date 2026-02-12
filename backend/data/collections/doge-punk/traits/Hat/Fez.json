@@ -1,0 +1,11 @@
+{
+  "name": "Fez",
+  "category": "Hat",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Fez.svg",
+  "attributes": {
+    "variant": "fez",
+    "color": "#d32f2f"
+  }
+}

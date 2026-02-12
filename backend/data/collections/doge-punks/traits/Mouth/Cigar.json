@@ -1,0 +1,10 @@
+{
+  "name": "Cigar",
+  "category": "Mouth",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Cigar.svg",
+  "attributes": {
+    "variant": "cigar"
+  }
+}

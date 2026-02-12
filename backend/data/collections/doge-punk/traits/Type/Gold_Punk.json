@@ -1,0 +1,11 @@
+{
+  "name": "Gold Punk",
+  "category": "Type",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Gold_Punk.svg",
+  "attributes": {
+    "skin": "#ffd700",
+    "hair": "#b8860b"
+  }
+}

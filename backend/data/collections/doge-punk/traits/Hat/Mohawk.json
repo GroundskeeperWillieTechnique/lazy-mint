@@ -1,0 +1,10 @@
+{
+  "name": "Mohawk",
+  "category": "Hat",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Mohawk.svg",
+  "attributes": {
+    "color": "#e91e63"
+  }
+}

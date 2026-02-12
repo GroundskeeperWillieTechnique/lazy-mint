@@ -1,0 +1,10 @@
+{
+  "name": "Headphones",
+  "category": "Hat",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Headphones.svg",
+  "attributes": {
+    "color": "#f44336"
+  }
+}

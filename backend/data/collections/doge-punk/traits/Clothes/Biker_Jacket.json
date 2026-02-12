@@ -1,0 +1,10 @@
+{
+  "name": "Biker Jacket",
+  "category": "Clothes",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Biker_Jacket.svg",
+  "attributes": {
+    "color": "#1a1a1a"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Midnight Blue",
+  "category": "Background",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Midnight_Blue.svg",
+  "attributes": {
+    "variant": "midnight-blue"
+  }
+}

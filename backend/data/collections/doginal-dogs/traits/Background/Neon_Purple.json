@@ -1,0 +1,10 @@
+{
+  "name": "Neon Purple",
+  "category": "Background",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Neon_Purple.svg",
+  "attributes": {
+    "variant": "neon-purple"
+  }
+}

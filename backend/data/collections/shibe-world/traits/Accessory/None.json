@@ -1,0 +1,10 @@
+{
+  "name": "None",
+  "category": "Accessory",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "None.svg",
+  "attributes": {
+    "variant": "none"
+  }
+}

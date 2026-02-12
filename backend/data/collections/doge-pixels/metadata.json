@@ -1,0 +1,146 @@
+{
+  "traits": {
+    "Background": [
+      {
+        "name": "Crimson",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Background/Crimson.svg"
+      },
+      {
+        "name": "Forest Green",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Background/Forest_Green.svg"
+      },
+      {
+        "name": "Midnight Blue",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Background/Midnight_Blue.svg"
+      },
+      {
+        "name": "Gold Rush",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Gold_Rush.svg"
+      },
+      {
+        "name": "Void Black",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Background/Void_Black.svg"
+      }
+    ],
+    "Fur": [
+      {
+        "name": "Brown",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Fur/Brown.svg"
+      },
+      {
+        "name": "Black",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Fur/Black.svg"
+      },
+      {
+        "name": "Gray",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Fur/Gray.svg"
+      },
+      {
+        "name": "Red",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Fur/Red.svg"
+      }
+    ],
+    "Eyes": [
+      {
+        "name": "Normal",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Eyes/Normal.svg"
+      },
+      {
+        "name": "Cyber Visor",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Eyes/Cyber_Visor.svg"
+      },
+      {
+        "name": "Bloodshot",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Eyes/Bloodshot.svg"
+      },
+      {
+        "name": "Laser",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Eyes/Laser.svg"
+      }
+    ],
+    "Hat": [
+      {
+        "name": "None",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Hat/None.svg"
+      },
+      {
+        "name": "Pirate",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Hat/Pirate.svg"
+      },
+      {
+        "name": "Cowboy",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Hat/Cowboy.svg"
+      },
+      {
+        "name": "Top Hat",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Hat/Top_Hat.svg"
+      },
+      {
+        "name": "Cap",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Hat/Cap.svg"
+      }
+    ],
+    "Clothes": [
+      {
+        "name": "None",
+        "rarity": "Legendary",
+        "weight": 2,
+        "image": "traits/Clothes/None.svg"
+      },
+      {
+        "name": "Armor",
+        "rarity": "Rare",
+        "weight": 5,
+        "image": "traits/Clothes/Armor.svg"
+      },
+      {
+        "name": "Chain Mail",
+        "rarity": "Uncommon",
+        "weight": 15,
+        "image": "traits/Clothes/Chain_Mail.svg"
+      },
+      {
+        "name": "Space Suit",
+        "rarity": "Common",
+        "weight": 30,
+        "image": "traits/Clothes/Space_Suit.svg"
+      }
+    ]
+  }
+}

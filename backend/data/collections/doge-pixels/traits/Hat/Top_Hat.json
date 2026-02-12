@@ -1,0 +1,10 @@
+{
+  "name": "Top Hat",
+  "category": "Hat",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Top_Hat.svg",
+  "attributes": {
+    "variant": "top-hat"
+  }
+}

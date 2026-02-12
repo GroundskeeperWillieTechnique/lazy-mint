@@ -1,0 +1,10 @@
+{
+  "name": "Heart Eyes",
+  "category": "Eyes",
+  "rarity": "Uncommon",
+  "weight": 15,
+  "image": "Heart_Eyes.svg",
+  "attributes": {
+    "variant": "heart-eyes"
+  }
+}

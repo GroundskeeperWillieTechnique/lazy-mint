@@ -1,0 +1,10 @@
+{
+  "name": "Laser",
+  "category": "Eyes",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Laser.svg",
+  "attributes": {
+    "variant": "laser"
+  }
+}

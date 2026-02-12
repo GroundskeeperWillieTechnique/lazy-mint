@@ -1,0 +1,10 @@
+{
+  "name": "Crown",
+  "category": "Hat",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Crown.svg",
+  "attributes": {
+    "variant": "crown"
+  }
+}

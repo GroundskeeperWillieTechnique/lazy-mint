@@ -1,0 +1,10 @@
+{
+  "name": "Pizza",
+  "category": "Mouth",
+  "rarity": "Common",
+  "weight": 30,
+  "image": "Pizza.svg",
+  "attributes": {
+    "variant": "pizza"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Smirk",
+  "category": "Mouth",
+  "rarity": "Rare",
+  "weight": 5,
+  "image": "Smirk.svg",
+  "attributes": {
+    "color": "#d36e6e"
+  }
+}

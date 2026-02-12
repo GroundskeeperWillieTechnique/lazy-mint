@@ -1,0 +1,10 @@
+{
+  "name": "Spacesuit",
+  "category": "Clothes",
+  "rarity": "Legendary",
+  "weight": 2,
+  "image": "Spacesuit.svg",
+  "attributes": {
+    "color": "#eceff1"
+  }
+}
