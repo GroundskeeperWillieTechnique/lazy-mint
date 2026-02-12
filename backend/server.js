@@ -33,11 +33,27 @@ app.use(helmet({
 }));
 
 // CORS — restrict to known origins
-const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:4000,http://localhost:4001').split(',');
+// CORS — restrict to known origins
+const allowedOrigins = [
+  'http://localhost:4000', 
+  'http://localhost:4001',
+  process.env.ALLOWED_ORIGINS, 
+  process.env.RENDER_EXTERNAL_URL // Auto-detected on Render
+].filter(Boolean).flatMap(o => o.split(','));
+
+console.log('[SERVER] Allowed Origins:', allowedOrigins);
+
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) callback(null, true);
-    else callback(new Error('CORS not allowed'));
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      console.warn(`[CORS] Blocked origin: ${origin}`);
+      return callback(new Error(`CORS not allowed for origin: ${origin}`));
+    }
   },
   credentials: true,
 }));
