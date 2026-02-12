@@ -355,7 +355,7 @@ const FRONTEND_BUILD = path.join(__dirname, '../frontend/dist');
 if (fs.existsSync(FRONTEND_BUILD)) {
   app.use(express.static(FRONTEND_BUILD));
   // SPA fallback — all non-API routes serve index.html
-  app.get('*', (req, res, next) => {
+  app.get('/*', (req, res, next) => {
     if (req.path.startsWith('/api') || req.path.startsWith('/assets')) return next();
     res.sendFile(path.join(FRONTEND_BUILD, 'index.html'));
   });
