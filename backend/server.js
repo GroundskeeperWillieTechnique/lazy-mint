@@ -173,7 +173,8 @@ app.get('/api/collections', (req, res) => {
     }).filter(Boolean);
     res.json(infoList);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to load collections' });
+    console.error(err);
+    res.status(500).json({ error: 'Failed to load collections', details: err.message, stack: err.stack });
   }
 });
 
