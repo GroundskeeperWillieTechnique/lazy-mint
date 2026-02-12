@@ -17,22 +17,21 @@ const COLLECTIONS_ROOT = path.join(__dirname, 'data/collections');
 // ─── Security ──────────────────────────────────────────────────
 app.set('trust proxy', 1); // Required for Render/Heroku (rate limiting)
 
-app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https:", "http:"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https:", "http:"],
-      fontSrc: ["'self'", "https:", "data:"],
-      imgSrc: ["'self'", "data:", "https:", "http:"],
-      connectSrc: ["'self'", "https:", "http:"],
-      upgradeInsecureRequests: null, // Disable auto-upgrade to https (causes issues on some proxies)
-    }
-  },
-  crossOriginResourcePolicy: { policy: "cross-origin" },
-}));
+// app.use(helmet({
+//   contentSecurityPolicy: {
+//     directives: {
+//       defaultSrc: ["'self'"],
+//       scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https:", "http:"],
+//       styleSrc: ["'self'", "'unsafe-inline'", "https:", "http:"],
+//       fontSrc: ["'self'", "https:", "data:"],
+//       imgSrc: ["'self'", "data:", "https:", "http:"],
+//       connectSrc: ["'self'", "https:", "http:"],
+//       upgradeInsecureRequests: null, // Disable auto-upgrade to https (causes issues on some proxies)
+//     }
+//   },
+//   crossOriginResourcePolicy: { policy: "cross-origin" },
+// }));
 
-// CORS — restrict to known origins
 // CORS — restrict to known origins
 const allowedOrigins = [
   'http://localhost:4000', 
@@ -67,6 +66,12 @@ const globalLimiter = rateLimit({
   legacyHeaders: false,
 });
 app.use(globalLimiter);
+
+// ─── Serve Frontend Build (Static) ──────────────────────────────
+const FRONTEND_BUILD = path.join(__dirname, '../frontend/dist');
+// Serve static files immediately after security/CORS to avoid being blocked by other middleware
+app.use(express.static(FRONTEND_BUILD));
+console.log('[SERVER] Static files configured from:', FRONTEND_BUILD);
 
 // Aggressive rate limit on sensitive endpoints
 const shuffleLimiter = rateLimit({
@@ -369,19 +374,6 @@ app.post('/api/mint-doge', mintLimiter, ensureUser, async (req, res) => {
   }
 });
 
-// ─── Serve Frontend Build in Production ────────────────────────
-const FRONTEND_BUILD = path.join(__dirname, '../frontend/dist');
-if (fs.existsSync(FRONTEND_BUILD)) {
-  console.log('[SERVER] Serving static files from:', FRONTEND_BUILD);
-  
-  app.use(express.static(FRONTEND_BUILD));
-  
-  // SPA fallback — all non-API routes serve index.html
-  app.use((req, res, next) => {
-    if (req.path.startsWith('/api') || req.path.startsWith('/assets')) return next();
-    res.sendFile(path.join(FRONTEND_BUILD, 'index.html'));
-  });
-}
 
 // ─── Global error handler ──────────────────────────────────────
 app.use((err, req, res, next) => {
