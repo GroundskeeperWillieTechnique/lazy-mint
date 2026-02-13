@@ -1,4 +1,6 @@
 import axios from 'axios';
+import * as bitcoin from 'bitcoinjs-lib';
+import { Buffer } from 'buffer';
 
 // Dogecoin Network Parameters
 const dogeNetwork = {
@@ -15,12 +17,7 @@ const dogeNetwork = {
 
 const SOCHAIN_API = 'https://sochain.com/api/v2';
 
-// Helper to get bitcoin lib
-const getBitcoin = () => window.bitcoin || window.bitcoinjsLib;
-
 export const createWallet = () => {
-    const bitcoin = getBitcoin();
-    if (!bitcoin) throw new Error("BitcoinJS not loaded");
     const keyPair = bitcoin.ECPair.makeRandom({ network: dogeNetwork });
     const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey, network: dogeNetwork });
     return {
@@ -30,10 +27,9 @@ export const createWallet = () => {
 };
 
 export const importWallet = (wif) => {
-    if (!window.bitcoin) throw new Error("BitcoinJS not loaded");
     try {
-        const keyPair = window.bitcoin.ECPair.fromWIF(wif, dogeNetwork);
-        const { address } = window.bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey, network: dogeNetwork });
+        const keyPair = bitcoin.ECPair.fromWIF(wif, dogeNetwork);
+        const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey, network: dogeNetwork });
         return {
             address,
             privateKey: wif
@@ -54,11 +50,9 @@ export const getBalance = async (address) => {
 };
 
 export const sendTransaction = async (wif, toAddress, amountSatoshis) => {
-    if (!window.bitcoin) throw new Error("BitcoinJS not loaded");
-    
     try {
-      const keyPair = window.bitcoin.ECPair.fromWIF(wif, dogeNetwork);
-      const { address } = window.bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey, network: dogeNetwork });
+      const keyPair = bitcoin.ECPair.fromWIF(wif, dogeNetwork);
+      const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey, network: dogeNetwork });
 
       // 1. Fetch UTXOs
       const { data: utxoData } = await axios.get(`${SOCHAIN_API}/get_tx_unspent/DOGE/${address}`);
@@ -70,7 +64,7 @@ export const sendTransaction = async (wif, toAddress, amountSatoshis) => {
 
       if (utxos.length === 0) throw new Error('No funds available');
 
-      const psbt = new window.bitcoin.Psbt({ network: dogeNetwork });
+      const psbt = new bitcoin.Psbt({ network: dogeNetwork });
       let totalInput = 0;
       const fee = 10000000; // 0.1 DOGE fixed fee
       const targetAmount = amountSatoshis + fee;
@@ -86,7 +80,7 @@ export const sendTransaction = async (wif, toAddress, amountSatoshis) => {
         psbt.addInput({
           hash: utxo.txid,
           index: utxo.output_no,
-          nonWitnessUtxo: window.Buffer.from(txData.data.tx_hex, 'hex')
+          nonWitnessUtxo: Buffer.from(txData.data.tx_hex, 'hex')
         });
         
         totalInput += val;

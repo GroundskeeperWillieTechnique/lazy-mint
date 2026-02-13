@@ -105,7 +105,7 @@ const InAppWallet = ({ onConnect, onDisconnect, isOpen, onClose }) => {
   // If no wallet is set, show Create/Import options
   if (!wallet) {
     return (
-      <div className="p-8 bg-[#111] text-white rounded-3xl border border-white/10 w-full max-w-sm mx-auto shadow-2xl flex flex-col items-center justify-center text-center animate-fade-in min-h-[400px]">
+      <div className="p-8 bg-[#111] text-white rounded-3xl w-full max-w-sm mx-auto shadow-2xl flex flex-col items-center justify-center text-center animate-fade-in min-h-[400px]">
         <h3 className="text-2xl font-black mb-8 flex items-center gap-3 justify-center">
           <Wallet className="text-doge" size={28} /> Doge Wallet
         </h3>

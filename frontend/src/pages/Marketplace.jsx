@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Filter, TrendingUp, ChevronLeft, ShoppingCart, Loader, RefreshCw } from 'lucide-react';
 import axios from 'axios';
-import DogeMasterLogo from '../assets/doge-master-logo.png';
+import DogeMasterLogo from '../assets/doge-master-logo-v2.png';
 
 const API_BASE = import.meta.env.VITE_API_URL || '/api';
 const ASSET_BASE = import.meta.env.VITE_ASSET_URL || '';
@@ -84,9 +84,11 @@ const Marketplace = () => {
         </button>
 
         <div className="flex items-center gap-6">
-           <div className="w-24 h-24 rounded-2xl border border-white/10 bg-gradient-to-br from-doge/20 to-purple-600/20 flex items-center justify-center overflow-hidden">
+           <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-doge/20 to-purple-600/20 flex items-center justify-center overflow-hidden border-none shrink-0" style={{ boxShadow: '0 0 20px rgba(251,191,36,0.3)' }}>
              {selectedCollection.id === 'doge-master' ? (
-               <img src={DogeMasterLogo} alt={selectedCollection.name} className="w-full h-full object-cover p-2" />
+               <div className="w-full h-full p-0">
+                  <img src={DogeMasterLogo} alt={selectedCollection.name} className="w-full h-full object-cover scale-110" />
+               </div>
              ) : (
                <span className="text-4xl font-black text-doge">{selectedCollection.symbol || selectedCollection.name[0]}</span>
              )}
@@ -200,7 +202,7 @@ const Marketplace = () => {
             >
               <div className="h-48 w-full bg-gradient-to-br from-doge/10 to-purple-600/10 rounded-2xl mb-4 overflow-hidden relative flex items-center justify-center">
                  {col.id === 'doge-master' ? (
-                   <img src={DogeMasterLogo} alt={col.name} className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" />
+                   <img src={DogeMasterLogo} alt={col.name} className="w-full h-full object-cover opacity-100 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" />
                  ) : (
                    <span className="text-6xl font-black text-white/10 group-hover:text-doge/30 transition-all duration-500 group-hover:scale-110">
                      {col.symbol || col.name[0]}
