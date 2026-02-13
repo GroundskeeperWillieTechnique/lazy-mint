@@ -222,24 +222,15 @@ const Workshop = ({ isConnected, userId, credits, setCredits, mintTransaction, u
                  Real app would use real images. */}
             <div className={`w-full h-full relative transition-all duration-500 ${isShuffling ? 'blur-lg grayscale scale-95' : ''} ${!isConnected ? 'opacity-80' : ''}`}>
                {/* Just render all categories in order? Or specific order? */}
-               {collectionInfo.categories && Object.keys(collectionInfo.categories).map((cat, i) => {
+               {collectionInfo.categories && Object.keys(collectionInfo.categories).map((cat) => {
                    const imgPath = traitImages[cat]?.[traits[cat]];
-                   // If path is full URL (from server) or needs prefix?
-                   // Server returns /assets/... usually. My script logic put it in traitImages.
-                   // Wait, logic: `if (t.imagePath) images[cat][t.name] = t.imagePath;`
-                   // I need to prepend ASSET_BASE if it doesn't have it?
-                   // Or relying on server returning relative path?
-                   // My script generated paths? No, script generated FILES. 
-                   // server.js /api/collection/trait-images returns `/assets/...`
-                   // But here I am constructing images manually from `col.categories`.
-                   // My script didn't put image paths in `categories`...
-                   // Wait, `generate-all-collections` script created `info.json` with `supply`.
-                   // It did NOT add image paths to the trait objects in `info.json`.
-                   // So `t.imagePath` will be undefined!
-                   // I need to construct the URL manually: `/assets/collections/${currentCollectionId}/traits/${cat}/${traits[cat]}.png`
                    
                    const safeTrait = traits[cat].replace(/\s+/g, '_');
                    const url = imgPath || `${ASSET_BASE}/assets/collections/${currentCollectionId}/traits/${cat}/${safeTrait}.svg`;
+                   
+                   // Define explicit Z-index order
+                   const LAYER_ORDER = ['Background', 'Fur', 'Clothes', 'Eyes', 'Mouth', 'Hat', 'Accessory'];
+                   const zIndex = LAYER_ORDER.indexOf(cat);
                    
                    return (
                        <img 
@@ -247,7 +238,7 @@ const Workshop = ({ isConnected, userId, credits, setCredits, mintTransaction, u
                           src={url} 
                           alt={cat}
                           className="absolute inset-0 w-full h-full object-contain drop-shadow-lg" 
-                          style={{ zIndex: i }}
+                          style={{ zIndex: zIndex === -1 ? 10 : zIndex }}
                        />
                    );
                })}
