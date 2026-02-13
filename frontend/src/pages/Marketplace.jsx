@@ -84,8 +84,12 @@ const Marketplace = () => {
         </button>
 
         <div className="flex items-center gap-6">
-           <div className="w-24 h-24 rounded-2xl border border-white/10 bg-gradient-to-br from-doge/20 to-purple-600/20 flex items-center justify-center">
-             <span className="text-4xl font-black text-doge">{selectedCollection.symbol || selectedCollection.name[0]}</span>
+           <div className="w-24 h-24 rounded-2xl border border-white/10 bg-gradient-to-br from-doge/20 to-purple-600/20 flex items-center justify-center overflow-hidden">
+             {selectedCollection.id === 'doge-master' ? (
+               <img src={DogeMasterLogo} alt={selectedCollection.name} className="w-full h-full object-cover p-2" />
+             ) : (
+               <span className="text-4xl font-black text-doge">{selectedCollection.symbol || selectedCollection.name[0]}</span>
+             )}
            </div>
            <div>
              <h2 className="text-4xl font-black tracking-tighter">{selectedCollection.name}</h2>

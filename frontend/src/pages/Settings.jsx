@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Settings as SettingsIcon, User, Wallet, Bell, Shield, Save, CheckCircle } from 'lucide-react';
 
-const API_BASE = 'http://localhost:4001/api';
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 const SettingsPage = ({ userId, username: initialUsername, walletAddress: initialWallet }) => {
   const [username, setUsername] = useState(initialUsername || '');
