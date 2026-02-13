@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ImageIcon, History, Shield, ExternalLink, Sparkles } from 'lucide-react';
 
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
-const ASSET_BASE = import.meta.env.VITE_ASSET_URL || '';
+import { API_BASE, ASSET_BASE } from '../config';
 
 const Gallery = () => {
   const [mints, setMints] = useState([]);

@@ -3,8 +3,7 @@ import { Search, Filter, TrendingUp, ChevronLeft, ShoppingCart, Loader, RefreshC
 import axios from 'axios';
 import DogeMasterLogo from '../assets/doge-master-logo-v2.png';
 
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
-const ASSET_BASE = import.meta.env.VITE_ASSET_URL || '';
+import { API_BASE, ASSET_BASE } from '../config';
 
 const Marketplace = () => {
   const [collections, setCollections] = useState([]);

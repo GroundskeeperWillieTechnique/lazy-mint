@@ -3,8 +3,7 @@ import { Shuffle, Lock, Unlock, ShieldCheck, RefreshCw, Sparkles, ChevronDown } 
 import axios from 'axios';
 import confetti from 'canvas-confetti';
 
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
-const ASSET_BASE = import.meta.env.VITE_ASSET_URL || '';
+import { API_BASE, ASSET_BASE } from '../config';
 
 const RARITY_COLORS = {
   Legendary: { bg: 'bg-yellow-500/20', text: 'text-yellow-400', border: 'border-yellow-500/40' },

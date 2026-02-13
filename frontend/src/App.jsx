@@ -11,7 +11,7 @@ import InAppWallet from './components/InAppWallet';
 import Marketplace from './pages/Marketplace';
 import * as DogeWalletUtils from './utils/doge-wallet';
 
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
+import { API_BASE } from './config';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('workshop');

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Trophy, Users, Star, Crown, Medal, TrendingUp } from 'lucide-react';
 
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
+import { API_BASE } from '../config';
 
 const RANK_STYLES = [
   { bg: 'bg-gradient-to-r from-doge/20 to-transparent', badge: 'bg-doge text-black shadow-lg shadow-doge/30 scale-110', icon: Crown },

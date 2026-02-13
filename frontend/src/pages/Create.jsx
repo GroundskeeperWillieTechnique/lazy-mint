@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Plus, Rocket, Image as ImageIcon, CheckCircle, ArrowRight, ArrowLeft, Upload, Layers, Tag } from 'lucide-react';
 
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
+import { API_BASE } from '../config';
 
 const STEPS = [
   { num: 1, label: 'Details', icon: Tag },
